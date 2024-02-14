@@ -18,6 +18,7 @@ const App: React.FC = () => {
     let player: Phaser.Types.Physics.Arcade.SpriteWithDynamicBody;
     let background: Phaser.GameObjects.TileSprite;
     let middleground: Phaser.GameObjects.TileSprite;
+    let cameraDolly: Phaser.Geom.Point;
 
     function preload(this: Phaser.Scene) {
       this.load.image("background", "assets/environment/back.png");
@@ -81,8 +82,6 @@ const App: React.FC = () => {
       setTopCollisionTiles(368);
       setTopCollisionTiles(262);
 
-      this.cameras.main.setBounds(0, 0, map.widthInPixels, map.heightInPixels);
-
       this.textures.get("atlas");
       this.textures.get("atlas-props");
 
@@ -111,7 +110,12 @@ const App: React.FC = () => {
 
       this.physics.add.collider(player, layer);
       this.physics.world.setBounds(0, 0, map.widthInPixels, map.heightInPixels);
+
+      this.cameras.main.setBounds(0, 0, layer.width * layer.scaleX, layer.height * layer.scaleY);
+
       this.cameras.main.startFollow(player);
+      cameraDolly = new Phaser.Geom.Point(player.x, player.y);
+      this.cameras.main.startFollow(cameraDolly);
     }
 
     function update(this: Phaser.Scene) {
@@ -135,6 +139,9 @@ const App: React.FC = () => {
         player.anims.play("jump", true);
         player.setVelocityY(PLAYER_VELOCITY_Y);
       }
+
+      cameraDolly.x = Math.floor(player.x);
+      cameraDolly.y = Math.floor(player.y);
 
       // parallax scrolling for background and middleground
       background.tilePositionX = this.cameras.main.scrollX * 0.1;
