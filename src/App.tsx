@@ -5,7 +5,7 @@ const GAME_WIDTH = 384;
 const GAME_HEIGHT = 240;
 const GRAVITY = 800;
 const PLAYER_VELOCITY_X = 160;
-const PLAYER_VELOCITY_Y = -330;
+const PLAYER_VELOCITY_Y = -350;
 const PLAYER_BOUNCE = 0.2;
 const PLAYER_ANIM_FRAME_RATE = 16;
 
@@ -53,21 +53,43 @@ const App: React.FC = () => {
         return;
       }
 
-      map.setCollision([
+      layer.setCollision([
         27, 29, 31, 33, 35, 37, 77, 81, 86, 87, 127, 129, 131, 133, 134, 135, 83, 84, 502, 504, 505, 529, 530, 333, 335,
         337, 339, 366, 368, 262, 191, 193, 195, 241, 245, 291, 293, 295,
       ]);
+      const setTopCollisionTiles = (tileIndex: number) => {
+        var x, y, tile;
+        for (x = 0; x < layer.width; x++) {
+          for (y = 1; y < layer.height; y++) {
+            tile = layer.getTileAt(x, y);
+            if (tile !== null) {
+              if (tile.index === tileIndex) {
+                tile.setCollision(false, false, true, false);
+              }
+            }
+          }
+        }
+      };
+      setTopCollisionTiles(35);
+      setTopCollisionTiles(36);
+      setTopCollisionTiles(84);
+      setTopCollisionTiles(86);
+      setTopCollisionTiles(134);
+      setTopCollisionTiles(135);
+      setTopCollisionTiles(366);
+      setTopCollisionTiles(367);
+      setTopCollisionTiles(368);
+      setTopCollisionTiles(262);
 
       this.cameras.main.setBounds(0, 0, map.widthInPixels, map.heightInPixels);
 
       this.textures.get("atlas");
-      // const frames = atlasTexture.getFrameNames();
-      // console.log({ frames });
+      this.textures.get("atlas-props");
 
-      player = this.physics.add.sprite(40, 9, "atlas", "player/idle/player-idle-1");
+      player = this.physics.add.sprite(50, 100, "atlas", "player/idle/player-idle-1");
       player.setBounce(PLAYER_BOUNCE);
-      player.setCollideWorldBounds(true);
-      player.body.setSize(16, 32);
+      player.body.setSize(16, 16);
+      player.body.setOffset(8, 16);
       player.body.setGravityY(GRAVITY);
 
       this.anims.create({
@@ -88,6 +110,7 @@ const App: React.FC = () => {
       });
 
       this.physics.add.collider(player, layer);
+      this.physics.world.setBounds(0, 0, map.widthInPixels, map.heightInPixels);
       this.cameras.main.startFollow(player);
     }
 
@@ -136,8 +159,10 @@ const App: React.FC = () => {
         update,
       },
       scale: {
-        mode: Phaser.Scale.ZOOM_2X,
-        autoCenter: Phaser.Scale.RESIZE,
+        mode: Phaser.Scale.NONE, // Phaser will not scale the game
+        width: GAME_WIDTH,
+        height: GAME_HEIGHT,
+        zoom: window.devicePixelRatio,
       },
     };
 
