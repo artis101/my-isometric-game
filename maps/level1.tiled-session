@@ -8,22 +8,36 @@
     ],
     "fileStates": {
         "": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "atlas.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
         "level1.tmx": {
-            "scale": 1.27,
-            "selectedLayer": 0,
+            "scale": 1.9122,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 96.85039370078744,
-                "y": 154.33070866141733
+                "x": 165.25468047275393,
+                "y": 76.87480389080642
             }
         },
-        "level1.tmx#props": {
+        "level1.tmx#atlas-characters": {
             "scaleInDock": 1
+        },
+        "level1.tmx#atlas-props": {
+            "scaleInDock": 1
+        },
+        "level1.tmx#atlas-sprites": {
+            "scaleInDock": 1
+        },
+        "level1.tmx#atlas-terrain": {
+            "scaleInDock": 1.1481
+        },
+        "level1.tmx#props": {
+            "scaleInDock": 1,
+            "scaleInEditor": 0.68
         },
         "props.tsx": {
             "scaleInDock": 1,
@@ -39,16 +53,16 @@
     "map.tileWidth": 16,
     "map.width": 60,
     "openFiles": [
-        "level1.tmx",
-        "props.tsx"
+        "level1.tmx"
     ],
     "project": "level1.tiled-project",
     "property.type": "bool",
     "recentFiles": [
-        "props.tsx",
         "level1.tmx",
+        "props.tsx",
         "atlas.tsx"
     ],
+    "tileset.embedInMap": true,
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
         "height": 16,

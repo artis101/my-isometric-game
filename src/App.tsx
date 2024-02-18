@@ -3,9 +3,9 @@ import Phaser from "phaser";
 
 const GAME_WIDTH = 16 * 24;
 const GAME_HEIGHT = 16 * 18;
-const GRAVITY = 300;
 const PLAYER_VELOCITY_X = 160;
-const PLAYER_VELOCITY_Y = -350;
+const PLAYER_VELOCITY_Y = -250;
+const PLAYER_MASS = 1;
 const PLAYER_BOUNCE = 0.2;
 
 const App: React.FC = () => {
@@ -17,9 +17,9 @@ const App: React.FC = () => {
     let player: Phaser.Types.Physics.Arcade.SpriteWithDynamicBody;
 
     function preload(this: Phaser.Scene) {
+      this.load.multiatlas("atlas", "sprites/atlas.json", "sprites/");
       this.load.image("background", "assets/back.png");
       this.load.image("middleground", "assets/middle.png");
-      this.load.multiatlas("atlas", "sprites/atlas.json", "sprites/");
       this.load.tilemapTiledJSON("map", "maps/level1.json");
     }
 
@@ -40,25 +40,42 @@ const App: React.FC = () => {
         throw new Error("Failed to load map");
       }
 
-      const tileset = map.addTilesetImage("props", "atlas", 16, 16);
+      const tileset = map.addTilesetImage("atlas", "atlas", 16, 16);
 
       if (!tileset) {
         throw new Error("Failed to load tileset");
       }
 
       map.createLayer("Background", tileset, 0, 0);
-
       const ground = map.createLayer("Ground", tileset, 0, 0);
-      ground?.setCollisionByProperty({ collides: true });
 
       if (!ground) {
         throw new Error("Failed to create ground layer");
       }
 
+      ground.setCollisionByProperty({ collides: true });
+
+      const topCollisionTitles = map.filterTiles((tile: any) => tile && tile.properties && tile.properties.collidesTop);
+
+      if (topCollisionTitles) {
+        topCollisionTitles.forEach((tile) => {
+          tile.setCollision(false, false, true, false);
+        });
+      }
+
+      // create player from tileset sprite
+      player = this.physics.add.sprite(152, 448, "atlas", "idle/player-idle-1.png");
+      player.setBounce(PLAYER_BOUNCE);
+      player.setMass(PLAYER_MASS);
+      player.setCollideWorldBounds(true);
+      player.body.setSize(16, 32);
+
       // add object layer spikes
       const spikes = map.getObjectLayer("Spikes");
 
       if (spikes) {
+        const spikeSprites: Phaser.GameObjects.Sprite[] = [];
+
         spikes.objects.forEach((spike) => {
           const { x, y, width, height } = spike;
 
@@ -66,15 +83,20 @@ const App: React.FC = () => {
             throw new Error("Invalid spike object");
           }
 
-          const spikeSprite = this.add.sprite(x - width, y - height, "atlas", "spikes.png");
+          const spikeSprite = this.add.sprite(x + width / 2, y - height, "atlas", "spikes.png");
+
+          const gameSprite = this.physics.add.existing(spikeSprite, true);
+          spikeSprites.push(gameSprite);
+        });
+
+        this.physics.add.collider(player, spikeSprites, () => {
+          // player.setVelocityY(PLAYER_VELOCITY_Y * 0.7);
+          // player.setVelocityX(PLAYER_VELOCITY_X * 1.7);
+          // freeze because it's game over
+          player.setVelocity(0, 0);
+          player.anims.play("enemy-death", true);
         });
       }
-
-      // create player from tileset sprite
-      player = this.physics.add.sprite(160, 32, "atlas", "idle/player-idle-1.png");
-      player.setBounce(PLAYER_BOUNCE);
-      player.body.setSize(16, 32);
-      player.body.setGravityY(GRAVITY);
 
       this.anims.create({
         key: "idle",
@@ -108,7 +130,21 @@ const App: React.FC = () => {
           start: 1,
           end: 2,
         }),
-        frameRate: 10,
+        frameRate: 1,
+        repeat: -1,
+      });
+
+      console.log({ atlas: this.textures.get("atlas") });
+
+      this.anims.create({
+        key: "enemy-death",
+        frames: this.anims.generateFrameNames("atlas", {
+          prefix: "enemy-death-",
+          suffix: ".png",
+          start: 1,
+          end: 6,
+        }),
+        frameRate: 1,
         repeat: -1,
       });
 
@@ -166,7 +202,7 @@ const App: React.FC = () => {
         default: "arcade",
         arcade: {
           gravity: { y: 800 },
-          debug: false,
+          debug: true,
         },
       },
       scene: {

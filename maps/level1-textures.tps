@@ -176,6 +176,17 @@
             <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/big-crate.png</key>
             <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/block-big.png</key>
             <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/face-block.png</key>
+            <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/item-feedback/item-feedback-1.png</key>
+            <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/item-feedback/item-feedback-2.png</key>
+            <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/item-feedback/item-feedback-3.png</key>
+            <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/item-feedback/item-feedback-4.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/cliff-left.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/cliff-right.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/g-block-large.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/grass-slope-left.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/grass-slope-right.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/slope-dark-left.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/slope-dark-right.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0</point_f>
@@ -193,6 +204,47 @@
             <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/block.png</key>
             <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/crate.png</key>
             <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/small-platform.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/bricks-bottom-left.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/bricks-bottom-right.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/bricks-bottom.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/bricks-left.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/bricks-right.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/bricks-top-left.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/bricks-top-right.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/bricks-top.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/dark-brick-inset-1.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/dark-brick-inset-2.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/dark-brick-inset-3.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/dark-brick.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/dark-fire.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/dark-rubble.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/dark.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/dirt-block.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/dirt-bottom.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/dirt-corner-left.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/dirt-corner-right.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/dirt-edge-left.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/dirt-edge-right.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/foliage-1.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/foliage-2.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/g-block.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/grass-1.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/grass-2.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/grass-block-left.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/grass-block-right.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/grass-block.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/grass-platform-left.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/grass-platform-right.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/grass-platform.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/log.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/stairs-transparent.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/stairs.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/stump.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/void-block.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/void-bottom-rubble-transparent.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/void-bottom-rubble.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/void-filler-1.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/void-filler-2.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0</point_f>
@@ -315,6 +367,8 @@
                 <false/>
             </struct>
             <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/platform-long.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/wood-platform-left-short.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/wood-platform-right-short.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0</point_f>
@@ -524,7 +578,13 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/environment/tileset.png</key>
+            <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/cherry/cherry-1.png</key>
+            <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/cherry/cherry-2.png</key>
+            <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/cherry/cherry-3.png</key>
+            <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/cherry/cherry-4.png</key>
+            <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/cherry/cherry-5.png</key>
+            <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/cherry/cherry-6.png</key>
+            <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/cherry/cherry-7.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0</point_f>
@@ -533,9 +593,92 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>100,92,200,184</rect>
+                <rect>5,5,11,11</rect>
                 <key>scale9Paddings</key>
-                <rect>100,92,200,184</rect>
+                <rect>5,5,11,11</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/eagle/eagle-attack-1.png</key>
+            <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/eagle/eagle-attack-2.png</key>
+            <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/eagle/eagle-attack-3.png</key>
+            <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/eagle/eagle-attack-4.png</key>
+            <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/enemy-death/enemy-death-1.png</key>
+            <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/enemy-death/enemy-death-2.png</key>
+            <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/enemy-death/enemy-death-3.png</key>
+            <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/enemy-death/enemy-death-4.png</key>
+            <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/enemy-death/enemy-death-5.png</key>
+            <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/enemy-death/enemy-death-6.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>10,10,20,21</rect>
+                <key>scale9Paddings</key>
+                <rect>10,10,20,21</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/frog/idle/frog-idle-1.png</key>
+            <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/frog/idle/frog-idle-2.png</key>
+            <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/frog/idle/frog-idle-3.png</key>
+            <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/frog/idle/frog-idle-4.png</key>
+            <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/frog/jump/frog-jump-1.png</key>
+            <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/frog/jump/frog-jump-2.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>9,8,17,16</rect>
+                <key>scale9Paddings</key>
+                <rect>9,8,17,16</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/gem/gem-1.png</key>
+            <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/gem/gem-2.png</key>
+            <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/gem/gem-3.png</key>
+            <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/gem/gem-4.png</key>
+            <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/gem/gem-5.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>4,3,7,7</rect>
+                <key>scale9Paddings</key>
+                <rect>4,3,7,7</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/opossum/opossum-1.png</key>
+            <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/opossum/opossum-2.png</key>
+            <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/opossum/opossum-3.png</key>
+            <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/opossum/opossum-4.png</key>
+            <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/opossum/opossum-5.png</key>
+            <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/opossum/opossum-6.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>9,7,18,14</rect>
+                <key>scale9Paddings</key>
+                <rect>9,7,18,14</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
@@ -572,9 +715,132 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
+            <key type="filename">Graphical Assets/environment/Ground/dark-ceiling-plant-1.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/dark-cliff-left.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/dark-cliff-right.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/dark-stalaktite.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/grass-slope-steep-left.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/grass-slope-steep-right.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>4,8,8,16</rect>
+                <key>scale9Paddings</key>
+                <rect>4,8,8,16</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">Graphical Assets/environment/Ground/dark-ceiling-plant-2.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>4,12,8,24</rect>
+                <key>scale9Paddings</key>
+                <rect>4,12,8,24</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">Graphical Assets/environment/Ground/dark-doors.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>8,12,16,24</rect>
+                <key>scale9Paddings</key>
+                <rect>8,12,16,24</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">Graphical Assets/environment/Ground/dark-hole-left.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/dark-hole-right.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>8,16,16,32</rect>
+                <key>scale9Paddings</key>
+                <rect>8,16,16,32</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">Graphical Assets/environment/Ground/dark-plant-1.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>12,12,24,24</rect>
+                <key>scale9Paddings</key>
+                <rect>12,12,24,24</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">Graphical Assets/environment/Ground/dark-plant-left.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/dark-plant-right.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>12,8,24,16</rect>
+                <key>scale9Paddings</key>
+                <rect>12,8,24,16</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">Graphical Assets/environment/Ground/wood-platform-left-long.png</key>
+            <key type="filename">Graphical Assets/environment/Ground/wood-platform-right-long.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>12,4,24,8</rect>
+                <key>scale9Paddings</key>
+                <rect>12,4,24,8</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
         </map>
         <key>fileLists</key>
         <map type="SpriteSheetMap">
+            <key>characters</key>
+            <struct type="SpriteSheet">
+                <key>files</key>
+                <array>
+                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/player</filename>
+                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/frog</filename>
+                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/eagle</filename>
+                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/opossum</filename>
+                </array>
+            </struct>
             <key>props</key>
             <struct type="SpriteSheet">
                 <key>files</key>
@@ -608,14 +874,87 @@
                     <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/tree-house.png</filename>
                     <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/tree.png</filename>
                     <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/wooden-house.png</filename>
-                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/player</filename>
+                </array>
+            </struct>
+            <key>sprites</key>
+            <struct type="SpriteSheet">
+                <key>files</key>
+                <array>
+                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/cherry</filename>
+                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/gem</filename>
+                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/item-feedback</filename>
+                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/enemy-death</filename>
                 </array>
             </struct>
             <key>terrain</key>
             <struct type="SpriteSheet">
                 <key>files</key>
                 <array>
-                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/tileset.png</filename>
+                    <filename>Graphical Assets/environment/Ground/bricks-bottom-left.png</filename>
+                    <filename>Graphical Assets/environment/Ground/bricks-bottom-right.png</filename>
+                    <filename>Graphical Assets/environment/Ground/bricks-bottom.png</filename>
+                    <filename>Graphical Assets/environment/Ground/bricks-left.png</filename>
+                    <filename>Graphical Assets/environment/Ground/bricks-right.png</filename>
+                    <filename>Graphical Assets/environment/Ground/bricks-top-left.png</filename>
+                    <filename>Graphical Assets/environment/Ground/bricks-top-right.png</filename>
+                    <filename>Graphical Assets/environment/Ground/bricks-top.png</filename>
+                    <filename>Graphical Assets/environment/Ground/cliff-left.png</filename>
+                    <filename>Graphical Assets/environment/Ground/cliff-right.png</filename>
+                    <filename>Graphical Assets/environment/Ground/dark-brick-inset-1.png</filename>
+                    <filename>Graphical Assets/environment/Ground/dark-brick-inset-2.png</filename>
+                    <filename>Graphical Assets/environment/Ground/dark-brick-inset-3.png</filename>
+                    <filename>Graphical Assets/environment/Ground/dark-brick.png</filename>
+                    <filename>Graphical Assets/environment/Ground/dark-ceiling-plant-1.png</filename>
+                    <filename>Graphical Assets/environment/Ground/dark-ceiling-plant-2.png</filename>
+                    <filename>Graphical Assets/environment/Ground/dark-cliff-left.png</filename>
+                    <filename>Graphical Assets/environment/Ground/dark-cliff-right.png</filename>
+                    <filename>Graphical Assets/environment/Ground/dark-doors.png</filename>
+                    <filename>Graphical Assets/environment/Ground/dark-fire.png</filename>
+                    <filename>Graphical Assets/environment/Ground/dark-hole-left.png</filename>
+                    <filename>Graphical Assets/environment/Ground/dark-hole-right.png</filename>
+                    <filename>Graphical Assets/environment/Ground/dark-plant-1.png</filename>
+                    <filename>Graphical Assets/environment/Ground/dark-plant-left.png</filename>
+                    <filename>Graphical Assets/environment/Ground/dark-plant-right.png</filename>
+                    <filename>Graphical Assets/environment/Ground/dark-rubble.png</filename>
+                    <filename>Graphical Assets/environment/Ground/dark-stalaktite.png</filename>
+                    <filename>Graphical Assets/environment/Ground/dark.png</filename>
+                    <filename>Graphical Assets/environment/Ground/dirt-block.png</filename>
+                    <filename>Graphical Assets/environment/Ground/dirt-bottom.png</filename>
+                    <filename>Graphical Assets/environment/Ground/dirt-corner-left.png</filename>
+                    <filename>Graphical Assets/environment/Ground/dirt-corner-right.png</filename>
+                    <filename>Graphical Assets/environment/Ground/dirt-edge-left.png</filename>
+                    <filename>Graphical Assets/environment/Ground/dirt-edge-right.png</filename>
+                    <filename>Graphical Assets/environment/Ground/foliage-1.png</filename>
+                    <filename>Graphical Assets/environment/Ground/foliage-2.png</filename>
+                    <filename>Graphical Assets/environment/Ground/g-block-large.png</filename>
+                    <filename>Graphical Assets/environment/Ground/g-block.png</filename>
+                    <filename>Graphical Assets/environment/Ground/grass-1.png</filename>
+                    <filename>Graphical Assets/environment/Ground/grass-2.png</filename>
+                    <filename>Graphical Assets/environment/Ground/grass-block-left.png</filename>
+                    <filename>Graphical Assets/environment/Ground/grass-block-right.png</filename>
+                    <filename>Graphical Assets/environment/Ground/grass-block.png</filename>
+                    <filename>Graphical Assets/environment/Ground/grass-platform-left.png</filename>
+                    <filename>Graphical Assets/environment/Ground/grass-platform-right.png</filename>
+                    <filename>Graphical Assets/environment/Ground/grass-platform.png</filename>
+                    <filename>Graphical Assets/environment/Ground/grass-slope-left.png</filename>
+                    <filename>Graphical Assets/environment/Ground/grass-slope-right.png</filename>
+                    <filename>Graphical Assets/environment/Ground/grass-slope-steep-left.png</filename>
+                    <filename>Graphical Assets/environment/Ground/grass-slope-steep-right.png</filename>
+                    <filename>Graphical Assets/environment/Ground/log.png</filename>
+                    <filename>Graphical Assets/environment/Ground/slope-dark-left.png</filename>
+                    <filename>Graphical Assets/environment/Ground/slope-dark-right.png</filename>
+                    <filename>Graphical Assets/environment/Ground/stairs-transparent.png</filename>
+                    <filename>Graphical Assets/environment/Ground/stairs.png</filename>
+                    <filename>Graphical Assets/environment/Ground/stump.png</filename>
+                    <filename>Graphical Assets/environment/Ground/void-block.png</filename>
+                    <filename>Graphical Assets/environment/Ground/void-bottom-rubble-transparent.png</filename>
+                    <filename>Graphical Assets/environment/Ground/void-bottom-rubble.png</filename>
+                    <filename>Graphical Assets/environment/Ground/void-filler-1.png</filename>
+                    <filename>Graphical Assets/environment/Ground/void-filler-2.png</filename>
+                    <filename>Graphical Assets/environment/Ground/wood-platform-left-long.png</filename>
+                    <filename>Graphical Assets/environment/Ground/wood-platform-left-short.png</filename>
+                    <filename>Graphical Assets/environment/Ground/wood-platform-right-long.png</filename>
+                    <filename>Graphical Assets/environment/Ground/wood-platform-right-short.png</filename>
                 </array>
             </struct>
         </map>
