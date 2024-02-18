@@ -128,7 +128,7 @@
             </struct>
         </map>
         <key>multiPackMode</key>
-        <enum type="SettingsBase::MultiPackMode">MultiPackAuto</enum>
+        <enum type="SettingsBase::MultiPackMode">MultiPackManual</enum>
         <key>forceIdenticalLayout</key>
         <false/>
         <key>outputFormat</key>
@@ -575,11 +575,10 @@
         </map>
         <key>fileLists</key>
         <map type="SpriteSheetMap">
-            <key>default</key>
+            <key>props</key>
             <struct type="SpriteSheet">
                 <key>files</key>
                 <array>
-                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/tileset.png</filename>
                     <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/big-crate.png</filename>
                     <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/block-big.png</filename>
                     <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/block.png</filename>
@@ -610,6 +609,13 @@
                     <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/tree.png</filename>
                     <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/wooden-house.png</filename>
                     <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/player</filename>
+                </array>
+            </struct>
+            <key>terrain</key>
+            <struct type="SpriteSheet">
+                <key>files</key>
+                <array>
+                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/tileset.png</filename>
                 </array>
             </struct>
         </map>
