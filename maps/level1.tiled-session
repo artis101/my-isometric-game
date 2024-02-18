@@ -16,12 +16,15 @@
             "scaleInEditor": 1
         },
         "level1.tmx": {
-            "scale": 1.9122,
+            "scale": 2.1316,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 165.25468047275393,
-                "y": 76.87480389080642
+                "x": 315.72527678738976,
+                "y": 358.88534434227813
             }
+        },
+        "level1.tmx#atlas": {
+            "scaleInDock": 2.0058
         },
         "level1.tmx#atlas-characters": {
             "scaleInDock": 1

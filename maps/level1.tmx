@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="60" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="7" nextobjectid="45">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="60" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="7" nextobjectid="46">
  <editorsettings>
   <export target="../public/maps/level1.json" format="json"/>
  </editorsettings>
@@ -477,6 +477,7 @@
   <object id="24" gid="123" x="271.576" y="303.461" width="16" height="16"/>
   <object id="25" gid="123" x="207.639" y="303.858" width="16" height="16"/>
   <object id="26" gid="123" x="527.324" y="351.513" width="16" height="16"/>
+  <object id="45" gid="123" x="207.645" y="464.225" width="16" height="16"/>
  </objectgroup>
  <objectgroup id="5" name="Spikes">
   <object id="21" gid="233" x="223.75" y="468.25" width="16" height="16"/>

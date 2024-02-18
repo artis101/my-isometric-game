@@ -15,6 +15,7 @@ const App: React.FC = () => {
     let cursors: Phaser.Types.Input.Keyboard.CursorKeys;
     let cameraDolly: Phaser.Geom.Point;
     let player: Phaser.Types.Physics.Arcade.SpriteWithDynamicBody;
+    const gemSprites: Phaser.GameObjects.Sprite[] = [];
 
     function preload(this: Phaser.Scene) {
       this.load.multiatlas("atlas", "sprites/atlas.json", "sprites/");
@@ -90,11 +91,30 @@ const App: React.FC = () => {
         });
 
         this.physics.add.collider(player, spikeSprites, () => {
-          // player.setVelocityY(PLAYER_VELOCITY_Y * 0.7);
-          // player.setVelocityX(PLAYER_VELOCITY_X * 1.7);
-          // freeze because it's game over
           player.setVelocity(0, 0);
-          player.anims.play("enemy-death", true);
+        });
+      }
+
+      // add object layer gems
+      const gems = map.getObjectLayer("Gems");
+
+      if (gems) {
+        gems.objects.forEach((gem) => {
+          const { x, y, width, height } = gem;
+
+          if (!x || !y || !width || !height) {
+            throw new Error("Invalid gem object");
+          }
+
+          const gemSprite = this.add.sprite(x + width / 2, y - height, "atlas", "gem-1.png");
+          gemSprites.push(gemSprite);
+
+          this.physics.add.existing(gemSprite, true);
+        });
+
+        this.physics.add.overlap(player, gemSprites, (_, gem) => {
+          gem.destroy();
+          gemSprites.splice(gemSprites.indexOf(gem as unknown as Phaser.GameObjects.Sprite), 1);
         });
       }
 
@@ -134,8 +154,6 @@ const App: React.FC = () => {
         repeat: -1,
       });
 
-      console.log({ atlas: this.textures.get("atlas") });
-
       this.anims.create({
         key: "enemy-death",
         frames: this.anims.generateFrameNames("atlas", {
@@ -144,7 +162,19 @@ const App: React.FC = () => {
           start: 1,
           end: 6,
         }),
-        frameRate: 1,
+        frameRate: 5,
+        repeat: -1,
+      });
+
+      this.anims.create({
+        key: "gem",
+        frames: this.anims.generateFrameNames("atlas", {
+          prefix: "gem-",
+          suffix: ".png",
+          start: 1,
+          end: 5,
+        }),
+        frameRate: 5,
         repeat: -1,
       });
 
@@ -188,6 +218,10 @@ const App: React.FC = () => {
       } else if (player.body.velocity.x < 0) {
         player.setFlipX(true);
       }
+
+      gemSprites.forEach((gem) => {
+        gem.anims.play("gem", true);
+      });
 
       cameraDolly.x = Math.floor(player.x);
       cameraDolly.y = Math.floor(player.y);
