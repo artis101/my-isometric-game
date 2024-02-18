@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tileset version="1.10" tiledversion="1.10.2" name="props" tilewidth="16" tileheight="16" tilecount="1769" columns="28">
+ <image source="../public/sprites/atlas-0.png" width="448" height="944"/>
+ <tile id="1010" type="blocking"/>
+ <tile id="1012" type="blocking"/>
+ <tile id="1014" type="blocking"/>
+ <tile id="1016" type="blocking"/>
+ <tile id="1020" type="blocking"/>
+ <tile id="1066" type="blocking"/>
+ <tile id="1068" type="blocking"/>
+ <tile id="1070" type="blocking"/>
+ <tile id="1072" type="blocking"/>
+ <tile id="1076" type="blocking"/>
+ <tile id="1122" type="blocking"/>
+ <tile id="1124" type="blocking"/>
+ <tile id="1126" type="blocking"/>
+ <tile id="1128" type="blocking"/>
+ <tile id="1182" type="blocking"/>
+ <tile id="1184" type="blocking"/>
+ <tile id="1192" type="blocking"/>
+ <tile id="1194" type="blocking"/>
+ <tile id="1196" type="blocking"/>
+ <tile id="1248" type="blocking"/>
+ <tile id="1250" type="blocking"/>
+ <tile id="1252" type="blocking"/>
+ <tile id="1262" type="blocking"/>
+ <tile id="1263" type="blocking"/>
+ <tile id="1265" type="blocking"/>
+ <tile id="1266" type="blocking"/>
+ <tile id="1291" type="blocking"/>
+ <tile id="1293" type="blocking"/>
+ <tile id="1304" type="blocking"/>
+ <tile id="1306" type="blocking"/>
+ <tile id="1308" type="blocking"/>
+ <tile id="1352" type="blocking"/>
+ <tile id="1354" type="blocking"/>
+ <tile id="1356" type="blocking"/>
+ <tile id="1358" type="blocking"/>
+ <tile id="1388" type="blocking"/>
+ <tile id="1390" type="blocking"/>
+ <tile id="1392" type="blocking"/>
+ <tile id="1542" type="blocking"/>
+ <tile id="1544" type="blocking"/>
+ <tile id="1545" type="blocking"/>
+ <tile id="1572" type="blocking"/>
+ <tile id="1573" type="blocking"/>
+</tileset>

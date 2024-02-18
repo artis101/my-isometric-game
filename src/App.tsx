@@ -1,33 +1,24 @@
 import React, { useEffect, useRef } from "react";
 import Phaser from "phaser";
 
-const GAME_WIDTH = 384;
-const GAME_HEIGHT = 240;
-const GRAVITY = 800;
+const GAME_WIDTH = 16 * 24;
+const GAME_HEIGHT = 16 * 18;
+const GRAVITY = 300;
 const PLAYER_VELOCITY_X = 160;
 const PLAYER_VELOCITY_Y = -350;
 const PLAYER_BOUNCE = 0.2;
-const PLAYER_ANIM_FRAME_RATE = 16;
 
 const App: React.FC = () => {
   const gameRef = useRef<Phaser.Game | null>(null);
 
   useEffect(() => {
-    let game: Phaser.Game;
     let cursors: Phaser.Types.Input.Keyboard.CursorKeys;
-    let player: Phaser.Types.Physics.Arcade.SpriteWithDynamicBody;
-    let background: Phaser.GameObjects.TileSprite;
-    let middleground: Phaser.GameObjects.TileSprite;
     let cameraDolly: Phaser.Geom.Point;
+    let player: Phaser.Types.Physics.Arcade.SpriteWithDynamicBody;
 
     function preload(this: Phaser.Scene) {
-      this.load.image("background", "assets/environment/back.png");
-      this.load.image("middleground", "assets/environment/middle.png");
-
-      this.load.atlas("atlas", "assets/atlas/atlas.png", "assets/atlas/atlas.json");
-      this.load.atlas("atlas-props", "assets/atlas/atlas-props.png", "assets/atlas/atlas-props.json");
-      this.load.image("tileset", "assets/environment/tileset.png");
-      this.load.tilemapTiledJSON("map", "assets/maps/map.json");
+      this.load.multiatlas("atlas", "sprites/atlas.json", "sprites/");
+      this.load.tilemapTiledJSON("map", "maps/level1.json");
     }
 
     function create(this: Phaser.Scene) {
@@ -36,84 +27,60 @@ const App: React.FC = () => {
       }
 
       const map = this.add.tilemap("map");
-      const tileset = map.addTilesetImage("tileset", "tileset", 16, 16);
 
-      if (!map || !tileset) {
-        return;
+      if (!map) {
+        throw new Error("Failed to load map");
       }
 
-      background = this.add.tileSprite(0, 0, map.width, 0, "background").setOrigin(0, 0);
-      middleground = this.add.tileSprite(0, 80, GAME_WIDTH, GAME_HEIGHT, "middleground").setOrigin(0, 0);
-      // background and middleground are fixed to the camera
-      background.setScrollFactor(0);
-      middleground.setScrollFactor(0);
+      const tileset = map.addTilesetImage("props", "atlas", 16, 16);
 
-      const layer = map.createLayer("Tile Layer 1", tileset, 0, 0);
-
-      if (!layer) {
-        return;
+      if (!tileset) {
+        throw new Error("Failed to load tileset");
       }
 
-      layer.setCollision([
-        27, 29, 31, 33, 35, 37, 77, 81, 86, 87, 127, 129, 131, 133, 134, 135, 83, 84, 502, 504, 505, 529, 530, 333, 335,
-        337, 339, 366, 368, 262, 191, 193, 195, 241, 245, 291, 293, 295,
-      ]);
-      const setTopCollisionTiles = (tileIndex: number) => {
-        var x, y, tile;
-        for (x = 0; x < layer.width; x++) {
-          for (y = 1; y < layer.height; y++) {
-            tile = layer.getTileAt(x, y);
-            if (tile !== null) {
-              if (tile.index === tileIndex) {
-                tile.setCollision(false, false, true, false);
-              }
-            }
-          }
-        }
-      };
-      setTopCollisionTiles(35);
-      setTopCollisionTiles(36);
-      setTopCollisionTiles(84);
-      setTopCollisionTiles(86);
-      setTopCollisionTiles(134);
-      setTopCollisionTiles(135);
-      setTopCollisionTiles(366);
-      setTopCollisionTiles(367);
-      setTopCollisionTiles(368);
-      setTopCollisionTiles(262);
+      const ground = map.createLayer("Ground", tileset, 0, 0);
 
-      this.textures.get("atlas");
-      this.textures.get("atlas-props");
+      ground?.setCollisionByProperty({ collides: true });
 
-      player = this.physics.add.sprite(50, 100, "atlas", "player/idle/player-idle-1");
+      if (!ground) {
+        throw new Error("Failed to create ground layer");
+      }
+
+      // create player from tileset sprite
+      player = this.physics.add.sprite(100, 32, "atlas", "idle/player-idle-1.png");
       player.setBounce(PLAYER_BOUNCE);
-      player.body.setSize(16, 16);
-      player.body.setOffset(8, 16);
+      player.body.setSize(16, 32);
       player.body.setGravityY(GRAVITY);
 
       this.anims.create({
         key: "idle",
-        frames: this.anims.generateFrameNames("atlas", { prefix: "player/idle/player-idle-", start: 1, end: 2 }),
-        frameRate: PLAYER_ANIM_FRAME_RATE,
-      });
-      this.anims.create({
-        key: "run",
-        frames: this.anims.generateFrameNames("atlas", { prefix: "player/run/player-run-", start: 1, end: 6 }),
-        frameRate: PLAYER_ANIM_FRAME_RATE,
+        frames: this.anims.generateFrameNames("atlas", {
+          prefix: "idle/player-idle-",
+          suffix: ".png",
+          start: 1,
+          end: 4,
+        }),
+        frameRate: 10,
         repeat: -1,
       });
+
       this.anims.create({
-        key: "jump",
-        frames: this.anims.generateFrameNames("atlas", { prefix: "player/jump/player-jump-", start: 1, end: 2 }),
-        frameRate: PLAYER_ANIM_FRAME_RATE,
+        key: "run",
+        frames: this.anims.generateFrameNames("atlas", {
+          prefix: "run/player-run-",
+          suffix: ".png",
+          start: 1,
+          end: 6,
+        }),
+        frameRate: 10,
+        repeat: -1,
       });
 
-      this.physics.add.collider(player, layer);
+      this.physics.add.collider(player, ground);
       this.physics.world.setBounds(0, 0, map.widthInPixels, map.heightInPixels);
 
-      this.cameras.main.setBounds(0, 0, layer.width * layer.scaleX, layer.height * layer.scaleY);
+      this.cameras.main.setBounds(0, 0, ground.width, ground.height);
 
-      this.cameras.main.startFollow(player);
       cameraDolly = new Phaser.Geom.Point(player.x, player.y);
       this.cameras.main.startFollow(cameraDolly);
     }
@@ -142,10 +109,6 @@ const App: React.FC = () => {
 
       cameraDolly.x = Math.floor(player.x);
       cameraDolly.y = Math.floor(player.y);
-
-      // parallax scrolling for background and middleground
-      background.tilePositionX = this.cameras.main.scrollX * 0.1;
-      middleground.tilePositionX = this.cameras.main.scrollX * 0.5;
     }
 
     const config: Phaser.Types.Core.GameConfig = {
@@ -173,7 +136,7 @@ const App: React.FC = () => {
       },
     };
 
-    game = new Phaser.Game(config);
+    const game = new Phaser.Game(config);
 
     gameRef.current = game;
 

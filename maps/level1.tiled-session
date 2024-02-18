@@ -1,0 +1,57 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "level1.tmx",
+    "expandedProjectPaths": [
+    ],
+    "fileStates": {
+        "": {
+            "scaleInDock": 1
+        },
+        "atlas.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "level1.tmx": {
+            "scale": 1.27,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 96.85039370078744,
+                "y": 154.33070866141733
+            }
+        },
+        "level1.tmx#props": {
+            "scaleInDock": 1
+        },
+        "props.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        }
+    },
+    "last.exportedFilePath": "/Users/artis/dev/fun/my-isometric-game/public/maps",
+    "last.imagePath": "/Users/artis/dev/fun/my-isometric-game/public/sprites",
+    "map.height": 30,
+    "map.lastUsedExportFilter": "All Files (*)",
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 16,
+    "map.tileWidth": 16,
+    "map.width": 60,
+    "openFiles": [
+        "level1.tmx",
+        "props.tsx"
+    ],
+    "project": "level1.tiled-project",
+    "property.type": "bool",
+    "recentFiles": [
+        "props.tsx",
+        "level1.tmx",
+        "atlas.tsx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 16,
+        "width": 16
+    }
+}
