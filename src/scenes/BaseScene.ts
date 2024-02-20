@@ -1,3 +1,4 @@
+import { Overlay } from "../UI/Overlay";
 import { Player } from "../characters/Player";
 import { GAME_HEIGHT, GAME_WIDTH } from "../constants";
 import { Gem } from "../items/Gem";
@@ -7,6 +8,7 @@ export class BaseScene extends Phaser.Scene {
   // game variables
   protected map!: Phaser.Tilemaps.Tilemap;
   public ground!: Phaser.Tilemaps.TilemapLayer;
+  private overlay!: Overlay;
 
   // input keyInput
   public keyInput!: KeyInputKeys;
@@ -21,9 +23,6 @@ export class BaseScene extends Phaser.Scene {
   // characters
   public player!: Player;
 
-  // internal UI
-  private hpHearts = new Array<Phaser.GameObjects.Sprite>();
-
   // items
   private gems!: Phaser.GameObjects.Group;
   private shrooms!: Phaser.GameObjects.Group;
@@ -33,7 +32,7 @@ export class BaseScene extends Phaser.Scene {
     this.setupBackground();
     this.setupLayers();
     this.setupPlayer();
-    this.updateUI();
+    this.setupOverlay();
     this.setupPhysics();
     this.setupProps();
     this.setupGems();
@@ -52,7 +51,7 @@ export class BaseScene extends Phaser.Scene {
     this.cameraDolly.x = Math.floor(this.player.x);
     this.cameraDolly.y = Math.floor(this.player.y);
 
-    this.updateUI();
+    this.overlay.update();
   }
 
   setupInput() {
@@ -125,32 +124,8 @@ export class BaseScene extends Phaser.Scene {
     }
   }
 
-  updateUI() {
-    const playerHp = this.player.getHitpoints();
-
-    this.hpHearts.forEach((heart) => heart.destroy());
-
-    // hitpoints are 0.0 to 3.0 in 0.5 increments
-    // 0.0 = 0 hearts, 3.0 = 3 hearts, 1.5 = 1 heart and a half, 2.5 = 2 hearts and a half
-    const hearts = Math.floor(playerHp);
-    const halfHeart = playerHp % 1 !== 0;
-    const emptyHearts = 3 - hearts - (halfHeart ? 1 : 0);
-
-    for (let i = 0; i < hearts; i++) {
-      this.hpHearts.push(this.add.sprite(16 + i * 16, 16, "atlas", "ui_heart_full.png").setScrollFactor(0));
-    }
-
-    if (halfHeart) {
-      this.hpHearts.push(this.add.sprite(16 + hearts * 16, 16, "atlas", "ui_heart_half.png").setScrollFactor(0));
-    }
-
-    for (let i = 0; i < emptyHearts; i++) {
-      this.hpHearts.push(
-        this.add
-          .sprite(16 + (hearts + (halfHeart ? 1 : 0) + i) * 16, 16, "atlas", "ui_heart_empty.png")
-          .setScrollFactor(0)
-      );
-    }
+  setupOverlay() {
+    this.overlay = new Overlay(this);
   }
 
   setupPhysics() {
@@ -261,6 +236,7 @@ export class BaseScene extends Phaser.Scene {
   }
 
   setupPlayer() {
+    // todo later
     // const spawnPoint = this.map.findObject("Objects", (obj) => obj.name === "Spawn Point");
 
     // if (!spawnPoint) {

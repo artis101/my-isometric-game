@@ -25,7 +25,7 @@ export class Level1 extends BaseScene {
     // 26, 580 hurts 1, roughly 6-7 tiles
     // 26, 600 hurts 0.5, roughly 5-6 tiles
     // 26, 695 is safe, 700 is ground level
-    this.player = new Player(this, 26, 695, Player.MAX_HIT_POINTS);
+    this.player = new Player(this, 26, 600, Player.MAX_HIT_POINTS);
   }
 
   markPlayerMoved() {
@@ -117,6 +117,17 @@ export class Level1 extends BaseScene {
           },
         });
       }
+    }
+
+    if (this.player.getGemCount() >= 1 && this.treatText) {
+      this.tweens.add({
+        targets: this.treatText,
+        alpha: 0,
+        duration: 500,
+        onComplete: () => {
+          this.treatText.destroy();
+        },
+      });
     }
   }
 }

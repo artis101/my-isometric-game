@@ -1,3 +1,5 @@
+import { Gem } from "../items/Gem";
+
 const PLAYER_MOVE_VELOCITY = 160;
 const PLAYER_JUMP_VELOCITY = -300;
 const PLAYER_MAX_VELOCITY = 500;
@@ -23,7 +25,7 @@ export class Player extends Phaser.Physics.Arcade.Sprite {
 
   private lastHitTime = 0;
   private hitPoints = PLAYER_HITPOINTS;
-  private diamondCount = 0;
+  private gemCount = 0;
 
   constructor(scene: Phaser.Scene, x: number, y: number, hitPoints: number = PLAYER_HITPOINTS) {
     super(scene, x, y, "atlas", "idle/player-idle-1.png");
@@ -43,10 +45,6 @@ export class Player extends Phaser.Physics.Arcade.Sprite {
 
   public getHitpoints() {
     return this.hitPoints;
-  }
-
-  public getDiamondCount() {
-    return this.diamondCount;
   }
 
   public heal(amount: number) {
@@ -89,6 +87,16 @@ export class Player extends Phaser.Physics.Arcade.Sprite {
     }
   }
 
+  public getGemCount() {
+    return this.gemCount;
+  }
+
+  public collectGem(gem: Gem) {
+    this.gemCount++;
+    console.log(this.gemCount);
+    gem.destroy();
+  }
+
   update(keyInput: KeyInputKeys) {
     if (this.isDead()) {
       this.anims.play("hurt", true);
@@ -101,7 +109,6 @@ export class Player extends Phaser.Physics.Arcade.Sprite {
       return;
     } else if (this.sustainedFallDamage()) {
       const fallDamage = this.calculateFallDamage(this.lastVelocityY);
-      console.log({ fallDamage, lastVelocityY: this.lastVelocityY });
 
       this.setVelocity(0, 0);
       this.lastVelocityY = 0;

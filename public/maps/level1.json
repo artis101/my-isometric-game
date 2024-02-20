@@ -217,7 +217,7 @@
                  "id":79,
                  "name":"",
                  "rotation":0,
-                 "type":"",
+                 "type":"inaccessible",
                  "visible":true,
                  "width":16,
                  "x":279.437491703945,
@@ -314,7 +314,7 @@
          "y":0
         }],
  "nextlayerid":15,
- "nextobjectid":80,
+ "nextobjectid":82,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.10.2",
