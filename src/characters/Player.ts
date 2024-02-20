@@ -1,15 +1,23 @@
-const PLAYER_VELOCITY_X = 160;
-const PLAYER_VELOCITY_Y = -300;
-const PLAYER_MASS = 1;
+const PLAYER_MOVE_VELOCITY = 160;
+const PLAYER_JUMP_VELOCITY = -300;
+const PLAYER_MAX_VELOCITY = 500;
+const PLAYER_MASS = 10;
 const PLAYER_BOUNCE = 0.2;
 const PLAYER_HITPOINTS = 3.0;
-const FALL_DAMAGE_VELOCITY_THRESHOLD = -100;
+const FALL_DAMAGE_VELOCITY_THRESHOLD = 350;
+
+type Level1SceneTypeStub = Phaser.Scene & {
+  markPlayerMoved: () => void;
+  markPlayerJumped: () => void;
+};
 
 export class Player extends Phaser.Physics.Arcade.Sprite {
   /**
    * This Game Object's Physics Body.
    */
   body!: Phaser.Physics.Arcade.Body;
+
+  private lastVelocityY = 0;
 
   static MAX_HIT_POINTS = PLAYER_HITPOINTS;
 
@@ -24,6 +32,7 @@ export class Player extends Phaser.Physics.Arcade.Sprite {
     this.scene.physics.add.existing(this, false);
     this.setBounce(PLAYER_BOUNCE);
     this.setMass(PLAYER_MASS);
+    this.setMaxVelocity(PLAYER_MAX_VELOCITY, PLAYER_MAX_VELOCITY);
     this.setCollideWorldBounds(true);
     this.body.setSize(16, 24);
     this.body.setOffset(16, 8);
@@ -44,66 +53,81 @@ export class Player extends Phaser.Physics.Arcade.Sprite {
     this.hitPoints = Math.max(this.hitPoints - amount, 0);
   }
 
-  calculateFallDamage(velocity: number) {
-    // fall damage is calculated by the velocity of the player when they hit the ground
-    // the faster they are falling, the more damage they take
-    // maxiumum fall damage is 2.5 hitpoints
-    // minimum fall damage is 0.5 hitpoints
-    // minimum fall damage velocity is -100
-    // maximum fall damage velocity is -300
-    // the formula is:
-    // fall damage = (velocity - 100) / 50
-    // if fall damage is less than 0.5, return 0.5
-    // if fall damage is more than 2.5, return 2.5
-
-    const fallDamage = (velocity - 100) / 50;
-
-    return Math.min(Math.max(fallDamage, 0.5), 2.5);
+  private calculateFallDamage(velocity: number) {
+    // velocity range is between 400 and 500. Players take damage between 0.5 and 2.5
+    // the threshold is 400 when players take 0.5 points of damage and 450 when they take 2.5
+    // damage should be dealt in a linear fashion between 400 and 500 in increments of 0.5
+    const minDamage = 0.5;
+    const maxDamage = 2.5;
+    const minVelocity = 400;
+    const maxVelocity = 500;
+    const damagePerUnit = (maxDamage - minDamage) / (maxVelocity - minVelocity);
+    const damage = minDamage + (velocity - minVelocity) * damagePerUnit;
+    // rounded damage should be a multiple of 0.5
+    const roundedDamage = Math.round(damage * 2) / 2;
+    return roundedDamage;
   }
 
-  playerIsDead() {
+  public isDead() {
     return this.hitPoints <= 0;
   }
 
-  playerIsHurting() {
+  public isHurting() {
     return this.scene.time.now - this.lastHitTime < 500;
   }
 
-  playerSustainedFallDamage() {
-    return this.body.onFloor() && this.body.velocity.y < FALL_DAMAGE_VELOCITY_THRESHOLD;
+  private sustainedFallDamage() {
+    if (this.body.onFloor() && this.lastVelocityY && this.lastVelocityY > FALL_DAMAGE_VELOCITY_THRESHOLD) {
+      return true;
+    } else {
+      this.lastVelocityY = this.body.velocity.y;
+    }
   }
 
-  update(cursors: Phaser.Types.Input.Keyboard.CursorKeys) {
-    if (this.playerIsDead()) {
+  update(keyInput: KeyInputKeys) {
+    if (this.isDead()) {
       this.anims.play("hurt", true);
-      this.setVelocityX(0);
-      this.setVelocityY(0);
+      this.setVelocity(0, 0);
       return;
-    } else if (this.playerIsHurting()) {
-      this.setVelocityX(0);
-      this.setVelocityY(0);
+    } else if (this.isHurting()) {
+      this.setVelocity(0, 0);
       this.setTint(0xff8c8c);
       this.anims.play("hurt", true);
       return;
-    } else if (this.playerSustainedFallDamage()) {
-      const fallDamage = this.calculateFallDamage(this.body.velocity.y);
+    } else if (this.sustainedFallDamage()) {
+      const fallDamage = this.calculateFallDamage(this.lastVelocityY);
+      console.log({ fallDamage, lastVelocityY: this.lastVelocityY });
 
-      this.setVelocityX(0);
-      this.setVelocityY(0);
+      this.setVelocity(0, 0);
+      this.lastVelocityY = 0;
 
       this.hurt(fallDamage);
       return;
     } else {
       this.clearTint();
 
-      if (cursors.left.isDown) {
-        this.setVelocityX(-PLAYER_VELOCITY_X);
+      // current scene name
+      const sceneName = this.scene.scene.key;
+
+      if (
+        sceneName === "level1" &&
+        (keyInput.LEFT.isDown || keyInput.RIGHT.isDown || keyInput.UP.isDown || keyInput.SPACE.isDown)
+      ) {
+        (this.scene as Level1SceneTypeStub).markPlayerMoved();
+      }
+
+      if (sceneName === "level1" && (keyInput.SPACE.isDown || keyInput.UP.isDown)) {
+        (this.scene as Level1SceneTypeStub).markPlayerJumped();
+      }
+
+      if (keyInput.LEFT.isDown) {
+        this.setVelocityX(-PLAYER_MOVE_VELOCITY);
 
         if (this.body.onFloor()) {
           this.anims.play("run", true);
         }
-      } else if (cursors.right.isDown) {
-        this.setVelocityX(PLAYER_VELOCITY_X);
+      } else if (keyInput.RIGHT.isDown) {
+        this.setVelocityX(PLAYER_MOVE_VELOCITY);
 
         if (this.body.onFloor()) {
           this.anims.play("run", true);
@@ -116,8 +140,8 @@ export class Player extends Phaser.Physics.Arcade.Sprite {
         }
       }
 
-      if ((cursors.space.isDown || cursors.up.isDown) && this.body.onFloor()) {
-        this.setVelocityY(PLAYER_VELOCITY_Y);
+      if ((keyInput.SPACE.isDown || keyInput.UP.isDown) && this.body.onFloor()) {
+        this.setVelocityY(PLAYER_JUMP_VELOCITY);
         this.anims.play("jump", true);
       }
 

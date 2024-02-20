@@ -1,4 +1,5 @@
 import { BaseScene } from "../scenes/BaseScene";
+import { Level1 } from "../scenes/Level1";
 
 export class Shroom extends Phaser.GameObjects.Sprite {
   public scene!: BaseScene;
@@ -14,7 +15,15 @@ export class Shroom extends Phaser.GameObjects.Sprite {
   }
 
   overlap() {
-    if (this.scene.cursors.down.isDown) {
+    if (this.scene.keyInput.E.isDown) {
+      // current scene name
+      const sceneName = this.scene.scene.key;
+      // if the current scene is level1
+      if (sceneName === "level1") {
+        // mark the player as having eaten the mushroom
+        (this.scene as Level1).markPlayerAteMushroom();
+      }
+
       this.scene.player.hurt(1.5);
       this.destroy();
     }

@@ -8,8 +8,8 @@ export class BaseScene extends Phaser.Scene {
   protected map!: Phaser.Tilemaps.Tilemap;
   public ground!: Phaser.Tilemaps.TilemapLayer;
 
-  // input cursors
-  public cursors!: Phaser.Types.Input.Keyboard.CursorKeys;
+  // input keyInput
+  public keyInput!: KeyInputKeys;
 
   // camera dolly
   private cameraDolly!: Phaser.Geom.Point;
@@ -20,7 +20,6 @@ export class BaseScene extends Phaser.Scene {
 
   // characters
   public player!: Player;
-  protected PLAYER_HP = Player.MAX_HIT_POINTS;
 
   // internal UI
   private hpHearts = new Array<Phaser.GameObjects.Sprite>();
@@ -45,7 +44,7 @@ export class BaseScene extends Phaser.Scene {
   }
 
   update() {
-    this.player.update(this.cursors);
+    this.player.update(this.keyInput);
 
     this.background.tilePositionX = this.cameras.main.scrollX * 0.3;
     this.middleground.tilePositionX = this.cameras.main.scrollX * 0.6;
@@ -58,8 +57,9 @@ export class BaseScene extends Phaser.Scene {
 
   setupInput() {
     if (this.input && this.input.keyboard) {
-      this.cursors = this.input.keyboard.createCursorKeys();
-      this.input.keyboard.addKeys("E");
+      const keyInput = this.input.keyboard.addKeys("UP,DOWN,LEFT,RIGHT,SPACE,SHIFT,E");
+
+      this.keyInput = keyInput as KeyInputKeys;
     } else {
       throw new Error("Failed to create input");
     }
@@ -261,8 +261,20 @@ export class BaseScene extends Phaser.Scene {
   }
 
   setupPlayer() {
-    // create player from tileset sprite
-    this.player = new Player(this, 26, 175, this.PLAYER_HP);
+    // const spawnPoint = this.map.findObject("Objects", (obj) => obj.name === "Spawn Point");
+
+    // if (!spawnPoint) {
+    //   throw new Error("Failed to find spawn point");
+    // }
+
+    // const { x, y } = spawnPoint;
+
+    // if (!x || !y) {
+    //   throw new Error("Invalid spawn point");
+    // }
+
+    // this.player = new Player(this, x, y);
+    throw new Error("Must implement setupPlayer method");
   }
 
   setupCamera() {
