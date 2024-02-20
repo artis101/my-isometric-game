@@ -2,11 +2,11 @@ import { Gem } from "../items/Gem";
 
 const PLAYER_MOVE_VELOCITY = 160;
 const PLAYER_JUMP_VELOCITY = -300;
-const PLAYER_MAX_VELOCITY = 500;
+const PLAYER_MAX_VELOCITY = 800;
 const PLAYER_MASS = 10;
 const PLAYER_BOUNCE = 0.2;
 const PLAYER_HITPOINTS = 3.0;
-const FALL_DAMAGE_VELOCITY_THRESHOLD = 350;
+const FALL_DAMAGE_VELOCITY_THRESHOLD = 400;
 
 type Level1SceneTypeStub = Phaser.Scene & {
   markPlayerMoved: () => void;
@@ -20,6 +20,7 @@ export class Player extends Phaser.Physics.Arcade.Sprite {
   body!: Phaser.Physics.Arcade.Body;
 
   private lastVelocityY = 0;
+  private enableGravityTime = 0;
 
   static MAX_HIT_POINTS = PLAYER_HITPOINTS;
 
@@ -54,6 +55,20 @@ export class Player extends Phaser.Physics.Arcade.Sprite {
   public hurt(amount: number) {
     this.lastHitTime = this.scene.time.now;
     this.hitPoints = Math.max(this.hitPoints - amount, 0);
+    this.blink();
+  }
+
+  public kill() {
+    this.lastHitTime = this.scene.time.now;
+    this.hitPoints = 0;
+  }
+
+  private blink() {
+    // tween blink player
+    this.setTint(0xff8c8c);
+    this.scene.time.delayedCall(100, () => {
+      this.clearTint();
+    });
   }
 
   private calculateFallDamage(velocity: number) {
@@ -62,8 +77,8 @@ export class Player extends Phaser.Physics.Arcade.Sprite {
     // damage should be dealt in a linear fashion between 400 and 500 in increments of 0.5
     const minDamage = 0.5;
     const maxDamage = 2.5;
-    const minVelocity = 400;
-    const maxVelocity = 500;
+    const minVelocity = FALL_DAMAGE_VELOCITY_THRESHOLD;
+    const maxVelocity = PLAYER_MAX_VELOCITY;
     const damagePerUnit = (maxDamage - minDamage) / (maxVelocity - minVelocity);
     const damage = minDamage + (velocity - minVelocity) * damagePerUnit;
     // rounded damage should be a multiple of 0.5
@@ -93,28 +108,44 @@ export class Player extends Phaser.Physics.Arcade.Sprite {
 
   public collectGem(gem: Gem) {
     this.gemCount++;
-    console.log(this.gemCount);
     gem.destroy();
   }
 
+  public disableGravity(timeout: number = 500) {
+    this.enableGravityTime = this.scene.time.now + timeout;
+  }
+
+  public enableGravity() {
+    this.enableGravityTime = 0;
+  }
+
   update(keyInput: KeyInputKeys) {
+    if (this.enableGravityTime) {
+      if (this.scene.time.now > this.enableGravityTime) {
+        this.enableGravity();
+      } else {
+        this.anims.play("hurt", true);
+        return;
+      }
+    }
+
     if (this.isDead()) {
       this.anims.play("hurt", true);
       this.setVelocity(0, 0);
-      return;
     } else if (this.isHurting()) {
-      this.setVelocity(0, 0);
-      this.setTint(0xff8c8c);
       this.anims.play("hurt", true);
-      return;
+      this.setVelocity(0, 0);
     } else if (this.sustainedFallDamage()) {
       const fallDamage = this.calculateFallDamage(this.lastVelocityY);
 
-      this.setVelocity(0, 0);
-      this.lastVelocityY = 0;
+      if (fallDamage > 0) {
+        console.log({ fallDamage });
 
-      this.hurt(fallDamage);
-      return;
+        this.setVelocity(0, 0);
+        this.lastVelocityY = 0;
+
+        this.hurt(fallDamage);
+      }
     } else {
       this.clearTint();
 

@@ -2,10 +2,12 @@ import { Player } from "../characters/Player";
 import { BaseScene } from "./BaseScene";
 
 export class Level1 extends BaseScene {
+  private introText!: Phaser.GameObjects.BitmapText;
   private moveText!: Phaser.GameObjects.BitmapText;
   private interactText!: Phaser.GameObjects.BitmapText;
   private jumpText!: Phaser.GameObjects.BitmapText;
   private treatText!: Phaser.GameObjects.BitmapText;
+  private endOfRoad!: Phaser.GameObjects.BitmapText;
 
   private playerMoved = false;
   private playerJumped = false;
@@ -19,13 +21,10 @@ export class Level1 extends BaseScene {
   }
 
   setupPlayer() {
-    // 26, 540 hurts 2.5 roughty 9-10 tiles
-    // 26, 560 hurts 2, roughtly 8-9 tiles
-    // 26, 570 hurts 1.5, roughly 7-8 tiles
-    // 26, 580 hurts 1, roughly 6-7 tiles
-    // 26, 600 hurts 0.5, roughly 5-6 tiles
-    // 26, 695 is safe, 700 is ground level
-    this.player = new Player(this, 26, 600, Player.MAX_HIT_POINTS);
+    // start of level spawn point
+    // this.player = new Player(this, 26, 580, Player.MAX_HIT_POINTS);
+    // up the stairs spawn point
+    this.player = new Player(this, 936, 64, 2.5);
   }
 
   markPlayerMoved() {
@@ -54,6 +53,17 @@ export class Level1 extends BaseScene {
 
     super.create();
 
+    // intro text
+    this.introText = this.add
+      .bitmapText(
+        16,
+        740,
+        "atari",
+        "Oops, sorry about that fall damage..\nthis is not a professional game.\nIt's okay, I am sure there is something around here to heal you.\n\nSet out to find the treasure!",
+        10
+      )
+      .setDepth(1);
+
     // set up the tutorial
     this.moveText = this.add.bitmapText(20, 680, "atari", "Move with arrow keys", 10).setCenterAlign().setDepth(1);
 
@@ -67,6 +77,11 @@ export class Level1 extends BaseScene {
     this.treatText = this.add
       .bitmapText(390, 695, "atari", "Have a treat for following instructions", 10)
       .setCenterAlign();
+
+    this.endOfRoad = this.add
+      .bitmapText(620, 680, "atari", "You made it!\n..but there's nothing on this side.\nGo up", 10)
+      .setCenterAlign()
+      .setDepth(1);
   }
 
   update() {
@@ -74,7 +89,7 @@ export class Level1 extends BaseScene {
 
     if (this.playerMoved && this.moveText) {
       this.tweens.add({
-        targets: this.moveText,
+        targets: [this.moveText, this.introText],
         alpha: 0,
         duration: 500,
         onComplete: () => {
@@ -101,11 +116,11 @@ export class Level1 extends BaseScene {
       if (secondsSincePlayerAteMushroom <= 3) {
         this.interactText.setText("Good job! You followed instructions!..");
       } else if (secondsSincePlayerAteMushroom > 3 && secondsSincePlayerAteMushroom <= 6) {
-        this.interactText.setText("The mushroom is poisonous though..");
+        this.interactText.setText("That mushroom was poisonous..");
       } else if (secondsSincePlayerAteMushroom > 6 && secondsSincePlayerAteMushroom <= 9) {
-        this.interactText.setText("..you should not eat it..");
+        this.interactText.setText("..you shouldn't have eaten it..");
       } else if (secondsSincePlayerAteMushroom > 9 && secondsSincePlayerAteMushroom <= 12) {
-        this.interactText.setText("Didn't you see the skulls?");
+        this.interactText.setText("Skulls right there didn't give it away?");
       } else if (secondsSincePlayerAteMushroom > 12) {
         // tween out the text
         this.tweens.add({

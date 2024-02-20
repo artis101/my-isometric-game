@@ -14,6 +14,7 @@ export class Gem extends Phaser.GameObjects.Sprite {
     _: Phaser.Types.Physics.Arcade.GameObjectWithBody | Phaser.Tilemaps.Tile,
     gem: Phaser.Types.Physics.Arcade.GameObjectWithBody | Phaser.Tilemaps.Tile
   ) {
+    // player consumes it and destroys this gem
     (this.scene as BaseScene).player.collectGem(gem as Gem);
   }
 

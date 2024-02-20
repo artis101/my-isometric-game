@@ -3,6 +3,7 @@ import { Player } from "../characters/Player";
 import { GAME_HEIGHT, GAME_WIDTH } from "../constants";
 import { Gem } from "../items/Gem";
 import { Shroom } from "../items/Shroom";
+import { Spikes } from "../items/Spikes";
 
 export class BaseScene extends Phaser.Scene {
   // game variables
@@ -34,11 +35,14 @@ export class BaseScene extends Phaser.Scene {
     this.setupPlayer();
     this.setupOverlay();
     this.setupPhysics();
+    // these all are asset based
     this.setupProps();
     this.setupGems();
     this.setupSpikes();
     this.setupShrooms();
+    // final touches
     this.setupAnimations();
+    // this is to avoid camera jitter
     this.setupCamera();
   }
 
@@ -66,6 +70,7 @@ export class BaseScene extends Phaser.Scene {
 
   setupBackground() {
     this.background = this.add.tileSprite(0, 0, this.map.width, 0, "background").setOrigin(0, 0);
+
     this.middleground = this.add.tileSprite(0, 80, GAME_WIDTH, GAME_HEIGHT, "middleground").setOrigin(0, 0);
     // background and middleground are fixed to the camera
     this.background.setScrollFactor(0);
@@ -122,6 +127,15 @@ export class BaseScene extends Phaser.Scene {
         tile.setCollision(false, false, true, false);
       });
     }
+
+    const hidden = this.map.createLayer("Hidden", tilesets);
+
+    if (!hidden) {
+      throw new Error("Failed to create hidden layer");
+    }
+
+    hidden.setDepth(20);
+    hidden.setAlpha(1);
   }
 
   setupOverlay() {
@@ -175,8 +189,6 @@ export class BaseScene extends Phaser.Scene {
     const spikes = this.map.getObjectLayer("Spikes");
 
     if (spikes) {
-      const spikeSprites: Phaser.GameObjects.Sprite[] = [];
-
       spikes.objects.forEach((spike) => {
         const { x, y, width, height, type } = spike;
 
@@ -186,30 +198,7 @@ export class BaseScene extends Phaser.Scene {
 
         const isTopSpike = type === "spikes-top";
 
-        const spikeSprite = this.add.sprite(
-          x + width / 2,
-          y - height,
-          "atlas",
-          isTopSpike ? "spikes-top.png" : "spikes.png"
-        );
-
-        const gameSprite = this.physics.add.existing(spikeSprite, true).setDepth(1);
-        spikeSprites.push(gameSprite);
-      });
-
-      this.physics.add.collider(this.player, spikeSprites, () => {
-        // detect if player jumped on top
-        if (this.player.body.touching.down || this.player.body.touching.up) {
-          this.player.setTint(0xe45350);
-          this.game.pause();
-        } else {
-          // knock back player depending from which side they hit the spike
-          if (this.player.body.touching.left) {
-            this.player.setVelocityX(-300);
-          } else {
-            this.player.setVelocityX(300);
-          }
-        }
+        new Spikes(this, x, y, width, height, isTopSpike);
       });
     }
   }
