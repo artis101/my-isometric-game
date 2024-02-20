@@ -173,6 +173,21 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
+            <key type="filename">../../../../Downloads/Minotaur - Sprite Sheet.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>256,480,512,960</rect>
+                <key>scale9Paddings</key>
+                <rect>256,480,512,960</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/big-crate.png</key>
             <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/block-big.png</key>
             <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/face-block.png</key>
@@ -204,6 +219,82 @@
             <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/block.png</key>
             <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/crate.png</key>
             <key type="filename">../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/small-platform.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/angel/angel_idle_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/angel/angel_idle_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/angel/angel_idle_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/angel/angel_idle_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/angel/angel_run_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/angel/angel_run_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/angel/angel_run_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/angel/angel_run_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/chest/empty/chest_empty_open_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/chest/empty/chest_empty_open_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/chest/empty/chest_empty_open_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/chest/full/chest_full_open_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/chest/full/chest_full_open_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/chest/full/chest_full_open_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/chest/mimic/chest_mimic_open_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/chest/mimic/chest_mimic_open_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/chest/mimic/chest_mimic_open_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/flask_big_blue.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/flask_big_green.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/flask_big_red.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/flask_big_yellow.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/flask_blue.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/flask_green.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/flask_red.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/flask_yellow.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/goblin/goblin_idle_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/goblin/goblin_idle_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/goblin/goblin_idle_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/goblin/goblin_idle_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/goblin/goblin_run_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/goblin/goblin_run_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/goblin/goblin_run_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/goblin/goblin_run_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/ice_zombie/ice_zombie_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/ice_zombie/ice_zombie_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/ice_zombie/ice_zombie_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/ice_zombie/ice_zombie_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/imp/imp_idle_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/imp/imp_idle_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/imp/imp_idle_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/imp/imp_idle_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/imp/imp_run_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/imp/imp_run_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/imp/imp_run_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/imp/imp_run_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/lever_left.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/lever_right.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/muddy/muddy_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/muddy/muddy_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/muddy/muddy_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/muddy/muddy_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/skelet/skelet_idle_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/skelet/skelet_idle_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/skelet/skelet_idle_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/skelet/skelet_idle_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/skelet/skelet_run_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/skelet/skelet_run_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/skelet/skelet_run_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/skelet/skelet_run_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/skull.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/swampy/swampy_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/swampy/swampy_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/swampy/swampy_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/swampy/swampy_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/tiny_zombie/tiny_zombie_idle_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/tiny_zombie/tiny_zombie_idle_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/tiny_zombie/tiny_zombie_idle_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/tiny_zombie/tiny_zombie_idle_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/tiny_zombie/tiny_zombie_run_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/tiny_zombie/tiny_zombie_run_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/tiny_zombie/tiny_zombie_run_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/tiny_zombie/tiny_zombie_run_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/zombie/zombie_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/zombie/zombie_anim_f10.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/zombie/zombie_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/zombie/zombie_anim_f3.png</key>
             <key type="filename">Graphical Assets/environment/Ground/bricks-bottom-left.png</key>
             <key type="filename">Graphical Assets/environment/Ground/bricks-bottom-right.png</key>
             <key type="filename">Graphical Assets/environment/Ground/bricks-bottom.png</key>
@@ -715,6 +806,574 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/big_demon/big_demon_idle_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/big_demon/big_demon_idle_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/big_demon/big_demon_idle_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/big_demon/big_demon_idle_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/big_demon/big_demon_run_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/big_demon/big_demon_run_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/big_demon/big_demon_run_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/big_demon/big_demon_run_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/big_zombie/big_zombie_idle_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/big_zombie/big_zombie_idle_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/big_zombie/big_zombie_idle_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/big_zombie/big_zombie_idle_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/big_zombie/big_zombie_run_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/big_zombie/big_zombie_run_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/big_zombie/big_zombie_run_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/big_zombie/big_zombie_run_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/ogre/ogre_idle_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/ogre/ogre_idle_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/ogre/ogre_idle_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/ogre/ogre_idle_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/ogre/ogre_run_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/ogre/ogre_run_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/ogre/ogre_run_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/ogre/ogre_run_anim_f3.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>8,9,16,18</rect>
+                <key>scale9Paddings</key>
+                <rect>8,9,16,18</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/coin/coin_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/coin/coin_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/coin/coin_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/coin/coin_anim_f3.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>2,2,3,3</rect>
+                <key>scale9Paddings</key>
+                <rect>2,2,3,3</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/doc/doc_idle_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/doc/doc_idle_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/doc/doc_idle_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/doc/doc_idle_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/doc/doc_run_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/doc/doc_run_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/doc/doc_run_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/doc/doc_run_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/masked_orc_idle_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/masked_orc_idle_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/masked_orc_idle_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/masked_orc_idle_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/masked_orc_run_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/masked_orc_run_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/masked_orc_run_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/masked_orc_run_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/necromancer_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/necromancer_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/necromancer_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/necromancer_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/orc_shaman/orc_shaman_idle_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/orc_shaman/orc_shaman_idle_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/orc_shaman/orc_shaman_idle_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/orc_shaman/orc_shaman_idle_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/orc_shaman/orc_shaman_run_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/orc_shaman/orc_shaman_run_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/orc_shaman/orc_shaman_run_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/orc_shaman/orc_shaman_run_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/orc_warrior/orc_warrior_idle_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/orc_warrior/orc_warrior_idle_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/orc_warrior/orc_warrior_idle_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/orc_warrior/orc_warrior_idle_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/orc_warrior/orc_warrior_run_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/orc_warrior/orc_warrior_run_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/orc_warrior/orc_warrior_run_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/orc_warrior/orc_warrior_run_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/pumpkin_dude_idle_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/pumpkin_dude_idle_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/pumpkin_dude_idle_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/pumpkin_dude_idle_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/pumpkin_dude_run_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/pumpkin_dude_run_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/pumpkin_dude_run_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/pumpkin_dude_run_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/slug/slug_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/slug/slug_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/slug/slug_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/slug/slug_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/wogol/wogol_idle_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/wogol/wogol_idle_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/wogol/wogol_idle_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/wogol/wogol_idle_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/wogol/wogol_run_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/wogol/wogol_run_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/wogol/wogol_run_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/wogol/wogol_run_anim_f3.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>4,6,8,11</rect>
+                <key>scale9Paddings</key>
+                <rect>4,6,8,11</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/dwarf_f_hit_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/dwarf_f_idle_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/dwarf_f_idle_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/dwarf_f_idle_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/dwarf_f_idle_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/dwarf_f_run_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/dwarf_f_run_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/dwarf_f_run_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/dwarf_f_run_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/dwarf_m_hit_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/dwarf_m_idle_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/dwarf_m_idle_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/dwarf_m_idle_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/dwarf_m_idle_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/dwarf_m_run_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/dwarf_m_run_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/dwarf_m_run_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/dwarf_m_run_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/elf_f_hit_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/elf_f_idle_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/elf_f_idle_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/elf_f_idle_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/elf_f_idle_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/elf_f_run_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/elf_f_run_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/elf_f_run_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/elf_f_run_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/elf_m_hit_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/elf_m_idle_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/elf_m_idle_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/elf_m_idle_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/elf_m_idle_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/elf_m_run_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/elf_m_run_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/elf_m_run_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/elf_m_run_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/knight_f_hit_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/knight_f_idle_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/knight_f_idle_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/knight_f_idle_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/knight_f_idle_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/knight_f_run_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/knight_f_run_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/knight_f_run_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/knight_f_run_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/knight_m_hit_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/knight_m_idle_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/knight_m_idle_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/knight_m_idle_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/knight_m_idle_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/knight_m_run_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/knight_m_run_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/knight_m_run_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/knight_m_run_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/lizard_f_hit_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/lizard_f_idle_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/lizard_f_idle_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/lizard_f_idle_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/lizard_f_idle_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/lizard_f_run_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/lizard_f_run_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/lizard_f_run_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/lizard_f_run_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/lizard_m_hit_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/lizard_m_idle_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/lizard_m_idle_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/lizard_m_idle_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/lizard_m_idle_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/lizard_m_run_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/lizard_m_run_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/lizard_m_run_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/lizard_m_run_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/wizzard/f/wizzard_f_hit_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/wizzard/f/wizzard_f_idle_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/wizzard/f/wizzard_f_idle_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/wizzard/f/wizzard_f_idle_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/wizzard/f/wizzard_f_idle_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/wizzard/f/wizzard_f_run_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/wizzard/f/wizzard_f_run_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/wizzard/f/wizzard_f_run_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/wizzard/f/wizzard_f_run_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/wizzard/m/wizzard_m_hit_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/wizzard/m/wizzard_m_idle_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/wizzard/m/wizzard_m_idle_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/wizzard/m/wizzard_m_idle_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/wizzard/m/wizzard_m_idle_anim_f3.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/wizzard/m/wizzard_m_run_anim_f0.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/wizzard/m/wizzard_m_run_anim_f1.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/wizzard/m/wizzard_m_run_anim_f2.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/wizzard/m/wizzard_m_run_anim_f3.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>4,7,8,14</rect>
+                <key>scale9Paddings</key>
+                <rect>4,7,8,14</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/ui_heart_empty.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/ui_heart_full.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/ui_heart_half.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>3,3,7,6</rect>
+                <key>scale9Paddings</key>
+                <rect>3,3,7,6</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/weapons/weapon_anime_sword.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>3,8,6,15</rect>
+                <key>scale9Paddings</key>
+                <rect>3,8,6,15</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/weapons/weapon_arrow.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>2,5,3,11</rect>
+                <key>scale9Paddings</key>
+                <rect>2,5,3,11</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/weapons/weapon_axe.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>2,5,5,11</rect>
+                <key>scale9Paddings</key>
+                <rect>2,5,5,11</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/weapons/weapon_baton_with_spikes.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/weapons/weapon_golden_sword.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>3,6,5,11</rect>
+                <key>scale9Paddings</key>
+                <rect>3,6,5,11</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/weapons/weapon_big_hammer.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>3,9,5,19</rect>
+                <key>scale9Paddings</key>
+                <rect>3,9,5,19</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/weapons/weapon_bow.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/weapons/weapon_bow_2.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>4,7,7,13</rect>
+                <key>scale9Paddings</key>
+                <rect>4,7,7,13</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/weapons/weapon_cleaver.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>2,5,5,9</rect>
+                <key>scale9Paddings</key>
+                <rect>2,5,5,9</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/weapons/weapon_double_axe.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>4,6,8,12</rect>
+                <key>scale9Paddings</key>
+                <rect>4,6,8,12</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/weapons/weapon_duel_sword.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>2,8,5,15</rect>
+                <key>scale9Paddings</key>
+                <rect>2,8,5,15</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/weapons/weapon_green_magic_staff.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/weapons/weapon_red_magic_staff.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>2,8,4,15</rect>
+                <key>scale9Paddings</key>
+                <rect>2,8,4,15</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/weapons/weapon_hammer.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/weapons/weapon_mace.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>3,6,5,12</rect>
+                <key>scale9Paddings</key>
+                <rect>3,6,5,12</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/weapons/weapon_katana.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>2,7,3,15</rect>
+                <key>scale9Paddings</key>
+                <rect>2,7,3,15</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/weapons/weapon_knife.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>2,3,3,7</rect>
+                <key>scale9Paddings</key>
+                <rect>2,3,3,7</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/weapons/weapon_knight_sword.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>3,7,5,15</rect>
+                <key>scale9Paddings</key>
+                <rect>3,7,5,15</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/weapons/weapon_lavish_sword.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>3,8,5,15</rect>
+                <key>scale9Paddings</key>
+                <rect>3,8,5,15</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/weapons/weapon_machete.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>1,6,3,11</rect>
+                <key>scale9Paddings</key>
+                <rect>1,6,3,11</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/weapons/weapon_red_gem_sword.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/weapons/weapon_regular_sword.png</key>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/weapons/weapon_rusty_sword.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>3,5,5,11</rect>
+                <key>scale9Paddings</key>
+                <rect>3,5,5,11</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/weapons/weapon_saw_sword.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>3,6,5,13</rect>
+                <key>scale9Paddings</key>
+                <rect>3,6,5,13</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/weapons/weapon_spear.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>2,8,3,15</rect>
+                <key>scale9Paddings</key>
+                <rect>2,8,3,15</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/weapons/weapon_throwing_axe.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>3,4,5,7</rect>
+                <key>scale9Paddings</key>
+                <rect>3,4,5,7</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/weapons/weapon_waraxe.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>3,6,6,11</rect>
+                <key>scale9Paddings</key>
+                <rect>3,6,6,11</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">Graphical Assets/environment/Ground/dark-ceiling-plant-1.png</key>
             <key type="filename">Graphical Assets/environment/Ground/dark-cliff-left.png</key>
             <key type="filename">Graphical Assets/environment/Ground/dark-cliff-right.png</key>
@@ -835,61 +1494,200 @@
             <struct type="SpriteSheet">
                 <key>files</key>
                 <array>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/angel</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/big_demon</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/imp</filename>
                     <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/player</filename>
+                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/opossum</filename>
                     <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/frog</filename>
                     <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/eagle</filename>
-                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/opossum</filename>
+                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/enemy-death</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/muddy</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/skelet</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/swampy</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/slug</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/doc</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/goblin</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/ice_zombie</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/wogol</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/zombie</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/tiny_zombie</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/wizzard</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/ogre</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/orc_shaman</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/orc_warrior</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/big_zombie</filename>
                 </array>
             </struct>
-            <key>props</key>
-            <struct type="SpriteSheet">
-                <key>files</key>
-                <array>
-                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/big-crate.png</filename>
-                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/block-big.png</filename>
-                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/block.png</filename>
-                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/bush.png</filename>
-                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/crank-down.png</filename>
-                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/crank-up.png</filename>
-                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/crate.png</filename>
-                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/door-opened.png</filename>
-                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/door.png</filename>
-                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/face-block.png</filename>
-                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/house.png</filename>
-                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/palm.png</filename>
-                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/pine.png</filename>
-                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/plant-house.png</filename>
-                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/platform-long.png</filename>
-                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/rock-1.png</filename>
-                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/rock-2.png</filename>
-                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/rock.png</filename>
-                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/shrooms.png</filename>
-                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/sign.png</filename>
-                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/skulls.png</filename>
-                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/small-platform.png</filename>
-                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/spike-skull.png</filename>
-                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/spikes-top.png</filename>
-                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/spikes.png</filename>
-                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/straw-house.png</filename>
-                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/tree-house.png</filename>
-                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/tree.png</filename>
-                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/wooden-house.png</filename>
-                </array>
-            </struct>
-            <key>sprites</key>
+            <key>items</key>
             <struct type="SpriteSheet">
                 <key>files</key>
                 <array>
                     <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/cherry</filename>
                     <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/gem</filename>
                     <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/item-feedback</filename>
-                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/sprites/enemy-death</filename>
+                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/shrooms.png</filename>
+                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/sign.png</filename>
+                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/skulls.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/flask_big_blue.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/flask_big_green.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/flask_big_red.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/flask_big_yellow.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/flask_blue.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/flask_green.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/flask_red.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/flask_yellow.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/skull.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/chest</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/coin</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/weapons</filename>
+                </array>
+            </struct>
+            <key>minotaur</key>
+            <struct type="SpriteSheet">
+                <key>files</key>
+                <array>
+                    <filename>../../../../Downloads/Minotaur - Sprite Sheet.png</filename>
+                </array>
+            </struct>
+            <key>misc</key>
+            <struct type="SpriteSheet">
+                <key>files</key>
+                <array>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/pumpkin_dude_idle_anim_f0.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/pumpkin_dude_idle_anim_f1.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/pumpkin_dude_idle_anim_f2.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/pumpkin_dude_idle_anim_f3.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/pumpkin_dude_run_anim_f0.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/pumpkin_dude_run_anim_f1.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/pumpkin_dude_run_anim_f2.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/pumpkin_dude_run_anim_f3.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/necromancer_anim_f0.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/necromancer_anim_f1.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/necromancer_anim_f2.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/necromancer_anim_f3.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/lizard_f_hit_anim_f0.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/lizard_f_idle_anim_f0.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/lizard_f_idle_anim_f1.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/lizard_f_idle_anim_f2.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/lizard_f_idle_anim_f3.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/lizard_f_run_anim_f0.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/lizard_f_run_anim_f1.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/lizard_f_run_anim_f2.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/lizard_f_run_anim_f3.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/lizard_m_hit_anim_f0.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/lizard_m_idle_anim_f0.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/lizard_m_idle_anim_f1.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/lizard_m_idle_anim_f2.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/lizard_m_idle_anim_f3.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/lizard_m_run_anim_f0.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/lizard_m_run_anim_f1.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/lizard_m_run_anim_f2.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/lizard_m_run_anim_f3.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/masked_orc_idle_anim_f0.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/masked_orc_idle_anim_f1.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/masked_orc_idle_anim_f2.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/masked_orc_idle_anim_f3.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/masked_orc_run_anim_f0.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/masked_orc_run_anim_f1.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/masked_orc_run_anim_f2.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/masked_orc_run_anim_f3.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/knight_f_hit_anim_f0.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/knight_f_idle_anim_f0.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/knight_f_idle_anim_f1.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/knight_f_idle_anim_f2.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/knight_f_idle_anim_f3.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/knight_f_run_anim_f0.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/knight_f_run_anim_f1.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/knight_f_run_anim_f2.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/knight_f_run_anim_f3.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/knight_m_hit_anim_f0.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/knight_m_idle_anim_f0.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/knight_m_idle_anim_f1.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/knight_m_idle_anim_f2.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/knight_m_idle_anim_f3.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/knight_m_run_anim_f0.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/knight_m_run_anim_f1.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/knight_m_run_anim_f2.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/knight_m_run_anim_f3.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/elf_f_hit_anim_f0.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/elf_f_idle_anim_f0.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/elf_f_idle_anim_f1.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/elf_f_idle_anim_f2.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/elf_f_idle_anim_f3.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/elf_f_run_anim_f0.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/elf_f_run_anim_f1.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/elf_f_run_anim_f2.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/elf_f_run_anim_f3.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/elf_m_hit_anim_f0.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/elf_m_idle_anim_f0.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/elf_m_idle_anim_f1.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/elf_m_idle_anim_f2.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/elf_m_idle_anim_f3.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/elf_m_run_anim_f0.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/elf_m_run_anim_f1.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/elf_m_run_anim_f2.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/elf_m_run_anim_f3.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/dwarf_f_hit_anim_f0.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/dwarf_f_idle_anim_f0.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/dwarf_f_idle_anim_f1.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/dwarf_f_idle_anim_f2.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/dwarf_f_idle_anim_f3.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/dwarf_f_run_anim_f0.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/dwarf_f_run_anim_f1.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/dwarf_f_run_anim_f2.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/dwarf_f_run_anim_f3.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/dwarf_m_hit_anim_f0.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/dwarf_m_idle_anim_f0.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/dwarf_m_idle_anim_f1.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/dwarf_m_idle_anim_f2.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/dwarf_m_idle_anim_f3.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/dwarf_m_run_anim_f0.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/dwarf_m_run_anim_f1.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/dwarf_m_run_anim_f2.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/dwarf_m_run_anim_f3.png</filename>
+                </array>
+            </struct>
+            <key>props</key>
+            <struct type="SpriteSheet">
+                <key>files</key>
+                <array>
+                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/wooden-house.png</filename>
+                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/crank-down.png</filename>
+                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/crank-up.png</filename>
+                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/house.png</filename>
+                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/palm.png</filename>
+                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/pine.png</filename>
+                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/plant-house.png</filename>
+                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/rock-1.png</filename>
+                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/rock-2.png</filename>
+                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/rock.png</filename>
+                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/spike-skull.png</filename>
+                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/spikes-top.png</filename>
+                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/spikes.png</filename>
+                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/straw-house.png</filename>
+                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/tree-house.png</filename>
+                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/tree.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/lever_left.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/lever_right.png</filename>
                 </array>
             </struct>
             <key>terrain</key>
             <struct type="SpriteSheet">
                 <key>files</key>
                 <array>
+                    <filename>Graphical Assets/environment/Ground/grass-block-left.png</filename>
+                    <filename>Graphical Assets/environment/Ground/grass-block-right.png</filename>
+                    <filename>Graphical Assets/environment/Ground/grass-block.png</filename>
+                    <filename>Graphical Assets/environment/Ground/grass-platform-left.png</filename>
+                    <filename>Graphical Assets/environment/Ground/grass-platform-right.png</filename>
+                    <filename>Graphical Assets/environment/Ground/grass-platform.png</filename>
+                    <filename>Graphical Assets/environment/Ground/grass-slope-left.png</filename>
+                    <filename>Graphical Assets/environment/Ground/grass-slope-right.png</filename>
+                    <filename>Graphical Assets/environment/Ground/grass-slope-steep-left.png</filename>
+                    <filename>Graphical Assets/environment/Ground/grass-slope-steep-right.png</filename>
+                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/block-big.png</filename>
+                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/block.png</filename>
                     <filename>Graphical Assets/environment/Ground/bricks-bottom-left.png</filename>
                     <filename>Graphical Assets/environment/Ground/bricks-bottom-right.png</filename>
                     <filename>Graphical Assets/environment/Ground/bricks-bottom.png</filename>
@@ -898,6 +1696,13 @@
                     <filename>Graphical Assets/environment/Ground/bricks-top-left.png</filename>
                     <filename>Graphical Assets/environment/Ground/bricks-top-right.png</filename>
                     <filename>Graphical Assets/environment/Ground/bricks-top.png</filename>
+                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/bush.png</filename>
+                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/crate.png</filename>
+                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/door-opened.png</filename>
+                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/door.png</filename>
+                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/face-block.png</filename>
+                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/platform-long.png</filename>
+                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/small-platform.png</filename>
                     <filename>Graphical Assets/environment/Ground/cliff-left.png</filename>
                     <filename>Graphical Assets/environment/Ground/cliff-right.png</filename>
                     <filename>Graphical Assets/environment/Ground/dark-brick-inset-1.png</filename>
@@ -930,16 +1735,6 @@
                     <filename>Graphical Assets/environment/Ground/g-block.png</filename>
                     <filename>Graphical Assets/environment/Ground/grass-1.png</filename>
                     <filename>Graphical Assets/environment/Ground/grass-2.png</filename>
-                    <filename>Graphical Assets/environment/Ground/grass-block-left.png</filename>
-                    <filename>Graphical Assets/environment/Ground/grass-block-right.png</filename>
-                    <filename>Graphical Assets/environment/Ground/grass-block.png</filename>
-                    <filename>Graphical Assets/environment/Ground/grass-platform-left.png</filename>
-                    <filename>Graphical Assets/environment/Ground/grass-platform-right.png</filename>
-                    <filename>Graphical Assets/environment/Ground/grass-platform.png</filename>
-                    <filename>Graphical Assets/environment/Ground/grass-slope-left.png</filename>
-                    <filename>Graphical Assets/environment/Ground/grass-slope-right.png</filename>
-                    <filename>Graphical Assets/environment/Ground/grass-slope-steep-left.png</filename>
-                    <filename>Graphical Assets/environment/Ground/grass-slope-steep-right.png</filename>
                     <filename>Graphical Assets/environment/Ground/log.png</filename>
                     <filename>Graphical Assets/environment/Ground/slope-dark-left.png</filename>
                     <filename>Graphical Assets/environment/Ground/slope-dark-right.png</filename>
@@ -955,6 +1750,16 @@
                     <filename>Graphical Assets/environment/Ground/wood-platform-left-short.png</filename>
                     <filename>Graphical Assets/environment/Ground/wood-platform-right-long.png</filename>
                     <filename>Graphical Assets/environment/Ground/wood-platform-right-short.png</filename>
+                    <filename>../../../../Downloads/Sunny-land-files/Graphical Assets/environment/Props/big-crate.png</filename>
+                </array>
+            </struct>
+            <key>ui</key>
+            <struct type="SpriteSheet">
+                <key>files</key>
+                <array>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/ui_heart_empty.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/ui_heart_full.png</filename>
+                    <filename>../../../../Downloads/gameassets/0x72_DungeonTilesetII_v1.6/frames/ui_heart_half.png</filename>
                 </array>
             </struct>
         </map>
