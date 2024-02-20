@@ -21,8 +21,9 @@ export class Player extends Phaser.Physics.Arcade.Sprite {
 
   static MAX_HIT_POINTS = PLAYER_HITPOINTS;
 
-  private hitPoints = PLAYER_HITPOINTS;
   private lastHitTime = 0;
+  private hitPoints = PLAYER_HITPOINTS;
+  private diamondCount = 0;
 
   constructor(scene: Phaser.Scene, x: number, y: number, hitPoints: number = PLAYER_HITPOINTS) {
     super(scene, x, y, "atlas", "idle/player-idle-1.png");
@@ -42,6 +43,10 @@ export class Player extends Phaser.Physics.Arcade.Sprite {
 
   public getHitpoints() {
     return this.hitPoints;
+  }
+
+  public getDiamondCount() {
+    return this.diamondCount;
   }
 
   public heal(amount: number) {

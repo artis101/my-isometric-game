@@ -19,11 +19,11 @@ export class Level1 extends BaseScene {
   }
 
   setupPlayer() {
-    // 26, 540 hurts 2.5
-    // 26, 560 hurts 2
-    // 26, 570 hurts 1.5
-    // 26, 580 hurts 1
-    // 26, 600 hurts 0.5
+    // 26, 540 hurts 2.5 roughty 9-10 tiles
+    // 26, 560 hurts 2, roughtly 8-9 tiles
+    // 26, 570 hurts 1.5, roughly 7-8 tiles
+    // 26, 580 hurts 1, roughly 6-7 tiles
+    // 26, 600 hurts 0.5, roughly 5-6 tiles
     // 26, 695 is safe, 700 is ground level
     this.player = new Player(this, 26, 695, Player.MAX_HIT_POINTS);
   }
@@ -65,7 +65,7 @@ export class Level1 extends BaseScene {
 
     this.jumpText = this.add.bitmapText(142, 635, "atari", "Jump with up or space", 10).setCenterAlign().setDepth(1);
     this.treatText = this.add
-      .bitmapText(390, 605, "atari", "Have a treat for following instructions", 10)
+      .bitmapText(390, 695, "atari", "Have a treat for following instructions", 10)
       .setCenterAlign();
   }
 
