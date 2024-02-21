@@ -42,6 +42,54 @@ export class Player extends Phaser.Physics.Arcade.Sprite {
     this.body.setOffset(16, 8);
     this.setDepth(10);
     this.hitPoints = hitPoints;
+
+    this.scene.anims.create({
+      key: "idle",
+      frames: this.scene.anims.generateFrameNames("atlas", {
+        prefix: "idle/player-idle-",
+        suffix: ".png",
+        start: 1,
+        end: 4,
+      }),
+      frameRate: 10,
+      repeat: -1,
+    });
+
+    this.scene.anims.create({
+      key: "run",
+      frames: this.scene.anims.generateFrameNames("atlas", {
+        prefix: "run/player-run-",
+        suffix: ".png",
+        start: 1,
+        end: 6,
+      }),
+      frameRate: 10,
+      repeat: -1,
+    });
+
+    this.scene.anims.create({
+      key: "jump",
+      frames: this.scene.anims.generateFrameNames("atlas", {
+        prefix: "jump/player-jump-",
+        suffix: ".png",
+        start: 1,
+        end: 2,
+      }),
+      frameRate: 1,
+      repeat: -1,
+    });
+
+    this.scene.anims.create({
+      key: "hurt",
+      frames: this.scene.anims.generateFrameNames("atlas", {
+        prefix: "hurt/player-hurt-",
+        suffix: ".png",
+        start: 1,
+        end: 2,
+      }),
+      frameRate: 1,
+      repeat: -1,
+    });
   }
 
   public getHitpoints() {
@@ -111,7 +159,7 @@ export class Player extends Phaser.Physics.Arcade.Sprite {
     gem.destroy();
   }
 
-  public disableGravity(timeout: number = 500) {
+  public setHurtStateMs(timeout: number = 500) {
     this.enableGravityTime = this.scene.time.now + timeout;
   }
 
@@ -139,8 +187,6 @@ export class Player extends Phaser.Physics.Arcade.Sprite {
       const fallDamage = this.calculateFallDamage(this.lastVelocityY);
 
       if (fallDamage > 0) {
-        console.log({ fallDamage });
-
         this.setVelocity(0, 0);
         this.lastVelocityY = 0;
 

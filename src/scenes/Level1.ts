@@ -1,5 +1,5 @@
-import { Player } from "../characters/Player";
 import { BaseScene } from "./BaseScene";
+import { Player } from "../characters/Player";
 
 export class Level1 extends BaseScene {
   private introText!: Phaser.GameObjects.BitmapText;
@@ -24,7 +24,8 @@ export class Level1 extends BaseScene {
     // start of level spawn point
     // this.player = new Player(this, 26, 580, Player.MAX_HIT_POINTS);
     // up the stairs spawn point
-    this.player = new Player(this, 936, 64, 2.5);
+    this.player = new Player(this, 1100, 64, 2.5);
+    // this.player = new Player(this, 792, 14, Player.MAX_HIT_POINTS);
   }
 
   markPlayerMoved() {

@@ -11,7 +11,7 @@ export class Spikes extends Phaser.GameObjects.Sprite {
     this.setDepth(0);
 
     this.scene.physics.add.collider(scene.player, this, () => {
-      scene.player.disableGravity(200);
+      scene.player.setHurtStateMs(200);
 
       if (scene.player.body.touching.down || scene.player.body.touching.up) {
         scene.player.kill();

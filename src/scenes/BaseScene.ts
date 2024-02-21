@@ -1,9 +1,12 @@
 import { Overlay } from "../UI/Overlay";
 import { Player } from "../characters/Player";
 import { GAME_HEIGHT, GAME_WIDTH } from "../constants";
+import { HealthPotion } from "../items/HealthPotion";
+import { BigHealthPotion } from "../items/BigHealthPotion";
 import { Gem } from "../items/Gem";
 import { Shroom } from "../items/Shroom";
 import { Spikes } from "../items/Spikes";
+import { Muddy } from "../enemies/Muddy";
 
 export class BaseScene extends Phaser.Scene {
   // game variables
@@ -24,9 +27,13 @@ export class BaseScene extends Phaser.Scene {
   // characters
   public player!: Player;
 
+  // enemy groups
+  private enemies!: Phaser.GameObjects.Group;
+
   // items
   private gems!: Phaser.GameObjects.Group;
   private shrooms!: Phaser.GameObjects.Group;
+  private healthItems!: Phaser.GameObjects.Group;
 
   create() {
     this.setupInput();
@@ -34,12 +41,16 @@ export class BaseScene extends Phaser.Scene {
     this.setupLayers();
     this.setupPlayer();
     this.setupOverlay();
-    this.setupPhysics();
     // these all are asset based
     this.setupProps();
+    // enemies is an object layer in Tiled
+    this.setupEnemies();
     this.setupGems();
     this.setupSpikes();
     this.setupShrooms();
+    this.setupHealthItems();
+    // this forms collisions
+    this.setupPhysics();
     // final touches
     this.setupAnimations();
     // this is to avoid camera jitter
@@ -145,6 +156,7 @@ export class BaseScene extends Phaser.Scene {
   setupPhysics() {
     this.physics.world.setBounds(0, 0, this.map.widthInPixels, this.map.heightInPixels);
     this.physics.add.collider(this.player, this.ground);
+    this.physics.add.collider(this.enemies, this.ground);
   }
 
   setupProps() {
@@ -163,14 +175,41 @@ export class BaseScene extends Phaser.Scene {
     }
   }
 
+  setupEnemies() {
+    const enemies = this.map.getObjectLayer("Enemies");
+
+    if (enemies) {
+      this.enemies = this.add.group(undefined, {
+        classType: Muddy,
+        runChildUpdate: true,
+      });
+
+      enemies.objects.forEach((enemy) => {
+        const { x, y, type } = enemy;
+
+        if (!x || !y) {
+          throw new Error("Invalid enemy object");
+        }
+
+        if (!type) {
+          throw new Error("Enemy object missing type!");
+        }
+
+        if (type === "muddy") {
+          this.enemies.add(new Muddy(this, x, y));
+        }
+      });
+    }
+  }
+
   setupGems() {
     const gemObjectLayer = this.map.getObjectLayer("Gems");
-    this.gems = this.add.group(undefined, {
-      classType: Gem,
-      runChildUpdate: true,
-    });
 
     if (gemObjectLayer) {
+      this.gems = this.add.group(undefined, {
+        classType: Gem,
+        runChildUpdate: true,
+      });
       gemObjectLayer.objects.forEach((tile) => {
         const { x, y, width, height } = tile;
 
@@ -224,6 +263,32 @@ export class BaseScene extends Phaser.Scene {
     }
   }
 
+  setupHealthItems() {
+    const healthItemObjectLayer = this.map.getObjectLayer("Health items");
+    this.healthItems = this.add.group(undefined, {
+      classType: Shroom,
+      runChildUpdate: true,
+    });
+
+    if (healthItemObjectLayer) {
+      healthItemObjectLayer.objects.forEach((tile) => {
+        const { x, y, width, height, type } = tile;
+
+        if (!x || !y || !width || !height) {
+          throw new Error("Invalid healthItem object");
+        }
+
+        if (type === "small-health-potion") {
+          const healthItem = new HealthPotion(this, x + width / 2, y - height);
+          this.healthItems.add(healthItem);
+        } else if (type === "big-health-potion") {
+          const healthItem = new BigHealthPotion(this, x + width / 2, y - height);
+          this.healthItems.add(healthItem);
+        }
+      });
+    }
+  }
+
   setupPlayer() {
     // todo later
     // const spawnPoint = this.map.findObject("Objects", (obj) => obj.name === "Spawn Point");
@@ -251,54 +316,6 @@ export class BaseScene extends Phaser.Scene {
 
   setupAnimations() {
     this.anims.create({
-      key: "idle",
-      frames: this.anims.generateFrameNames("atlas", {
-        prefix: "idle/player-idle-",
-        suffix: ".png",
-        start: 1,
-        end: 4,
-      }),
-      frameRate: 10,
-      repeat: -1,
-    });
-
-    this.anims.create({
-      key: "run",
-      frames: this.anims.generateFrameNames("atlas", {
-        prefix: "run/player-run-",
-        suffix: ".png",
-        start: 1,
-        end: 6,
-      }),
-      frameRate: 10,
-      repeat: -1,
-    });
-
-    this.anims.create({
-      key: "jump",
-      frames: this.anims.generateFrameNames("atlas", {
-        prefix: "jump/player-jump-",
-        suffix: ".png",
-        start: 1,
-        end: 2,
-      }),
-      frameRate: 1,
-      repeat: -1,
-    });
-
-    this.anims.create({
-      key: "hurt",
-      frames: this.anims.generateFrameNames("atlas", {
-        prefix: "hurt/player-hurt-",
-        suffix: ".png",
-        start: 1,
-        end: 2,
-      }),
-      frameRate: 1,
-      repeat: -1,
-    });
-
-    this.anims.create({
       key: "enemy-death",
       frames: this.anims.generateFrameNames("atlas", {
         prefix: "enemy-death-",
@@ -307,19 +324,7 @@ export class BaseScene extends Phaser.Scene {
         end: 6,
       }),
       frameRate: 10,
-      repeat: -1,
-    });
-
-    this.anims.create({
-      key: "gem",
-      frames: this.anims.generateFrameNames("atlas", {
-        prefix: "gem-",
-        suffix: ".png",
-        start: 1,
-        end: 5,
-      }),
-      frameRate: 10,
-      repeat: -1,
+      repeat: 0,
     });
   }
 }

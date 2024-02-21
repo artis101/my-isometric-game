@@ -8,6 +8,24 @@ export class Gem extends Phaser.GameObjects.Sprite {
     this.scene.physics.add.existing(this, true);
     this.scene.physics.add.overlap(scene.player, this, this.collectGem, undefined, this);
     this.setDepth(30);
+
+    if (!this.scene.anims.exists("gem")) {
+      this.createAnims();
+    }
+  }
+
+  private createAnims() {
+    this.scene.anims.create({
+      key: "gem",
+      frames: this.anims.generateFrameNames("atlas", {
+        prefix: "gem-",
+        suffix: ".png",
+        start: 1,
+        end: 5,
+      }),
+      frameRate: 10,
+      repeat: -1,
+    });
   }
 
   collectGem(
