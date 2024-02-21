@@ -53,8 +53,8 @@ export class Muddy extends Phaser.Physics.Arcade.Sprite {
       }
 
       if (scene.player.body.touching.left || scene.player.body.touching.right) {
-        scene.player.setHurtStateMs(200);
         scene.player.hurt(0.5);
+        scene.player.setHurtStateMs(200);
         if (scene.player.x < this.x) {
           scene.player.setVelocity(-100, -100);
         } else {

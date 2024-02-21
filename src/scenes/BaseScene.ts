@@ -7,6 +7,7 @@ import { Gem } from "../items/Gem";
 import { Shroom } from "../items/Shroom";
 import { Spikes } from "../items/Spikes";
 import { Muddy } from "../enemies/Muddy";
+import { Mimic } from "../enemies/Mimic";
 
 export class BaseScene extends Phaser.Scene {
   // game variables
@@ -197,8 +198,15 @@ export class BaseScene extends Phaser.Scene {
           throw new Error("Enemy object missing type!");
         }
 
-        if (type === "muddy") {
-          this.enemies.add(new Muddy(this, x, y));
+        switch (type) {
+          case "mimic":
+            this.enemies.add(new Mimic(this, x, y));
+            break;
+          case "muddy":
+            this.enemies.add(new Muddy(this, x, y));
+            break;
+          default:
+            throw new Error(`Unknown enemy type: ${type}`);
         }
       });
     }
