@@ -20,7 +20,6 @@ export class BigHealthPotion extends Phaser.GameObjects.Sprite {
       const sceneName = this.scene.scene.key;
       // if the current scene is level1
       if (sceneName === "level1") {
-        // mark the player as having eaten the mushroom
         // (this.scene as Level1).
       }
 

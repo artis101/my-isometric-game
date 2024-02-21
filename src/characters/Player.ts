@@ -15,6 +15,8 @@ type Level1SceneTypeStub = Phaser.Scene & {
 };
 
 export class Player extends Phaser.Physics.Arcade.Sprite {
+  public scene: BaseScene;
+
   /**
    * This Game Object's Physics Body.
    */
@@ -31,7 +33,7 @@ export class Player extends Phaser.Physics.Arcade.Sprite {
 
   private vision!: Phaser.GameObjects.Image;
 
-  constructor(scene: Phaser.Scene, x: number, y: number, hitPoints: number = PLAYER_HITPOINTS) {
+  constructor(scene: BaseScene, x: number, y: number, hitPoints: number = PLAYER_HITPOINTS) {
     super(scene, x, y, "atlas", "idle/player-idle-1.png");
 
     this.scene = scene;
@@ -56,7 +58,7 @@ export class Player extends Phaser.Physics.Arcade.Sprite {
 
     const mask = new Phaser.Display.Masks.BitmapMask(this.scene, this.vision);
 
-    (this.scene as BaseScene).hidden.setMask(mask);
+    this.scene.hidden.setMask(mask);
     mask.invertAlpha = true;
 
     this.scene.anims.create({
@@ -222,11 +224,11 @@ export class Player extends Phaser.Physics.Arcade.Sprite {
         sceneName === "level1" &&
         (keyInput.LEFT.isDown || keyInput.RIGHT.isDown || keyInput.UP.isDown || keyInput.SPACE.isDown)
       ) {
-        (this.scene as Level1SceneTypeStub).markPlayerMoved();
+        (this.scene as unknown as Level1SceneTypeStub).markPlayerMoved();
       }
 
       if (sceneName === "level1" && (keyInput.SPACE.isDown || keyInput.UP.isDown)) {
-        (this.scene as Level1SceneTypeStub).markPlayerJumped();
+        (this.scene as unknown as Level1SceneTypeStub).markPlayerJumped();
       }
 
       if (keyInput.LEFT.isDown) {

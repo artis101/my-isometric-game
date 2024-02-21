@@ -1,6 +1,8 @@
 import { BaseScene } from "../scenes/BaseScene";
 
 export class Gem extends Phaser.GameObjects.Sprite {
+  public scene: BaseScene;
+
   constructor(scene: BaseScene, x: number, y: number) {
     super(scene, x, y, "atlas", "gem-1.png");
     this.scene = scene;
@@ -33,7 +35,7 @@ export class Gem extends Phaser.GameObjects.Sprite {
     gem: Phaser.Types.Physics.Arcade.GameObjectWithBody | Phaser.Tilemaps.Tile
   ) {
     // player consumes it and destroys this gem
-    (this.scene as BaseScene).player.collectGem(gem as Gem);
+    this.scene.player.collectGem(gem as Gem);
   }
 
   update() {

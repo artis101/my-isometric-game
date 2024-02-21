@@ -1,6 +1,8 @@
 import { BaseScene } from "../scenes/BaseScene";
 
 export class Muddy extends Phaser.Physics.Arcade.Sprite {
+  public scene: BaseScene;
+
   /**
    * This Game Object's Physics Body.
    */
@@ -88,19 +90,19 @@ export class Muddy extends Phaser.Physics.Arcade.Sprite {
     // walk back and forth on the platform
     if (this.body.onFloor()) {
       // get the dimensions of the platform we are walking on
-      const tileBelow = (this.scene as BaseScene).ground.getTileAtWorldXY(this.x, this.y + 16);
+      const tileBelow = this.scene.ground.getTileAtWorldXY(this.x, this.y + 16);
 
       if (!tileBelow) {
         return;
       }
 
-      const tileBelowToTheRight = (this.scene as BaseScene).ground.getTileAtWorldXY(this.x + 16, this.y + 16);
-      const tileBelowToTheLeft = (this.scene as BaseScene).ground.getTileAtWorldXY(this.x - 16, this.y + 16);
+      const tileBelowToTheRight = this.scene.ground.getTileAtWorldXY(this.x + 16, this.y + 16);
+      const tileBelowToTheLeft = this.scene.ground.getTileAtWorldXY(this.x - 16, this.y + 16);
 
       // if we are at the edge of the platform, turn around
       if (tileBelowToTheRight && !tileBelowToTheLeft) {
-        this.body.setVelocityX(100);
         this.setFlipX(true);
+        this.body.setVelocityX(100);
       } else if (tileBelowToTheLeft && !tileBelowToTheRight) {
         this.body.setVelocityX(-100);
       } else if (!tileBelowToTheLeft && !tileBelowToTheRight) {
