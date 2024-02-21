@@ -1,4 +1,5 @@
 import { Gem } from "../items/Gem";
+import { BaseScene } from "../scenes/BaseScene";
 
 const PLAYER_MOVE_VELOCITY = 160;
 const PLAYER_JUMP_VELOCITY = -300;
@@ -28,6 +29,8 @@ export class Player extends Phaser.Physics.Arcade.Sprite {
   private hitPoints = PLAYER_HITPOINTS;
   private gemCount = 0;
 
+  private vision!: Phaser.GameObjects.Image;
+
   constructor(scene: Phaser.Scene, x: number, y: number, hitPoints: number = PLAYER_HITPOINTS) {
     super(scene, x, y, "atlas", "idle/player-idle-1.png");
 
@@ -42,6 +45,19 @@ export class Player extends Phaser.Physics.Arcade.Sprite {
     this.body.setOffset(16, 8);
     this.setDepth(10);
     this.hitPoints = hitPoints;
+
+    this.vision = this.scene.make.image({
+      x: this.x,
+      y: this.y,
+      key: "vision",
+      add: false,
+    });
+    this.vision.scale = 0.2;
+
+    const mask = new Phaser.Display.Masks.BitmapMask(this.scene, this.vision);
+
+    (this.scene as BaseScene).hidden.setMask(mask);
+    mask.invertAlpha = true;
 
     this.scene.anims.create({
       key: "idle",
@@ -168,6 +184,10 @@ export class Player extends Phaser.Physics.Arcade.Sprite {
   }
 
   update(keyInput: KeyInputKeys) {
+    // move the vision mask with the player
+    this.vision.x = this.x;
+    this.vision.y = this.y;
+
     if (this.enableGravityTime) {
       if (this.scene.time.now > this.enableGravityTime) {
         this.enableGravity();

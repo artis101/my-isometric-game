@@ -12,6 +12,7 @@ export class BaseScene extends Phaser.Scene {
   // game variables
   protected map!: Phaser.Tilemaps.Tilemap;
   public ground!: Phaser.Tilemaps.TilemapLayer;
+  public hidden!: Phaser.Tilemaps.TilemapLayer;
   private overlay!: Overlay;
 
   // input keyInput
@@ -145,8 +146,9 @@ export class BaseScene extends Phaser.Scene {
       throw new Error("Failed to create hidden layer");
     }
 
-    hidden.setDepth(20);
-    hidden.setAlpha(1);
+    this.hidden = hidden;
+    this.hidden.setDepth(20);
+    this.hidden.setAlpha(1);
   }
 
   setupOverlay() {

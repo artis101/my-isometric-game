@@ -11,6 +11,7 @@ export class Preload extends Phaser.Scene {
     this.load.image("ui", "sprites/atlas-ui.png");
     this.load.image("background", "assets/back.png");
     this.load.image("middleground", "assets/middle.png");
+    this.load.image("vision", "masks/Mask-610x343.png");
     this.load.bitmapFont("atari", "fonts/gem.png", "fonts/gem.xml");
   }
 
