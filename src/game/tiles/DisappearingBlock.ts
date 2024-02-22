@@ -44,7 +44,6 @@ export class DisappearingBlock extends Phaser.Physics.Arcade.Sprite {
     _: Phaser.Types.Physics.Arcade.GameObjectWithBody | Phaser.Tilemaps.Tile,
     block: Phaser.Types.Physics.Arcade.GameObjectWithBody | Phaser.Tilemaps.Tile
   ) {
-    console.log("player collided with block");
     // fall down after this.disappearThreshold milliseconds after collision
     this.scene.time.delayedCall(this.disappearThreshold, () => {
       this.setMaxVelocity(100);
@@ -53,7 +52,7 @@ export class DisappearingBlock extends Phaser.Physics.Arcade.Sprite {
       this.scene.tweens.add({
         targets: block,
         alpha: 0,
-        duration: 1000,
+        duration: 800,
         delay: 500,
         ease: "Power2",
         onComplete: () => {

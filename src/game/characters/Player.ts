@@ -175,6 +175,7 @@ export class Player extends Phaser.Physics.Arcade.Sprite {
 
   public collectGem(gem: Gem) {
     this.gemCount++;
+    console.log("collect gem", gem, this.gemCount);
     gem.destroy();
   }
 
@@ -202,6 +203,7 @@ export class Player extends Phaser.Physics.Arcade.Sprite {
 
     if (this.isDead()) {
       this.anims.play("hurt", true);
+      this.setMaxVelocity(0);
       this.setVelocity(0, 0);
       this.body.setImmovable(true);
     } else if (this.isHurting()) {

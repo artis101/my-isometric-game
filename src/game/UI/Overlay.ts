@@ -8,11 +8,14 @@ export class Overlay {
   private hpHearts = new Array<Phaser.GameObjects.Sprite>();
   private scene: BaseScene;
   private player: Player;
+  private gemText!: Phaser.GameObjects.BitmapText;
 
   constructor(scene: BaseScene) {
     this.scene = scene;
     this.player = scene.player;
     this.hpHearts = new Array<Phaser.GameObjects.Sprite>();
+    this.scene.add.sprite(16, 32, "atlas", "gem-1.png").setScrollFactor(0);
+    this.gemText = this.scene.add.bitmapText(28, 34, "atari", `× ${this.player.getGemCount()}`, 12).setScrollFactor(0);
   }
 
   update() {
@@ -22,7 +25,6 @@ export class Overlay {
     }
 
     if (this.previousGemCount !== this.player.getGemCount()) {
-      this.previousGemCount = this.player.getGemCount();
       this.updateGemCount();
     }
   }
@@ -68,7 +70,7 @@ export class Overlay {
 
   private updateGemCount() {
     const gemCount = this.player.getGemCount();
-    this.scene.add.sprite(16, 32, "atlas", "gem-1.png").setScrollFactor(0);
-    this.scene.add.bitmapText(28, 34, "atari", `× ${gemCount}`, 12).setScrollFactor(0);
+    this.gemText.setText(`× ${gemCount}`);
+    this.previousGemCount = gemCount;
   }
 }

@@ -28,12 +28,14 @@ export class Level1 extends BaseScene {
     // up top fast moving platform
     // this.player = new Player(this, 45, 60, 3);
     // next to falling blocks
-    this.player = new Player(this, 85, 200, 3);
+    // this.player = new Player(this, 85, 200, 3);
     // near secret cave entrance
     // this.player = new Player(this, 1090, 500, 3);
     // top vertical platform
     // this.player = new Player(this, 1205, 50, 3);
     // this.player = new Player(this, 1905, 450, 3);
+    // wizzard room
+    this.player = new Player(this, 1920, 900, 3);
   }
 
   markPlayerMoved() {
@@ -153,5 +155,7 @@ export class Level1 extends BaseScene {
         },
       });
     }
+
+    this.wizzardSprite.anims.play("frog-idle", true);
   }
 }

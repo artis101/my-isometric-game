@@ -44,6 +44,7 @@ export class BaseScene extends Phaser.Scene {
   private gems!: Phaser.GameObjects.Group;
   private shrooms!: Phaser.GameObjects.Group;
   private healthItems!: Phaser.GameObjects.Group;
+  protected wizzardSprite!: Phaser.GameObjects.Sprite;
 
   create() {
     this.setupInput();
@@ -61,6 +62,7 @@ export class BaseScene extends Phaser.Scene {
     this.setupSpikes();
     this.setupShrooms();
     this.setupHealthItems();
+    this.setupWizzardBoss();
     // this forms collisions
     this.setupPhysics();
     // final touches
@@ -383,6 +385,47 @@ export class BaseScene extends Phaser.Scene {
           this.healthItems.add(healthItem);
         }
       });
+    }
+  }
+
+  setupWizzardBoss() {
+    // add object layer spikes
+    const wizzard = this.map.getObjectLayer("Wizzard");
+
+    if (wizzard) {
+      const objectImageProps = wizzard.objects[0];
+
+      const { x, y, width, height } = objectImageProps;
+
+      if ((!x && x !== 0) || !y || !width || !height) {
+        throw new Error("Invalid spike object");
+      }
+
+      const frogFrameNames = this.anims.generateFrameNames("atlas", {
+        prefix: "idle/frog-idle-",
+        suffix: ".png",
+        start: 1,
+        end: 4,
+      });
+
+      this.anims.create({
+        key: "frog-idle",
+        frames: [...frogFrameNames, ...frogFrameNames.reverse()],
+        frameRate: 4,
+        repeat: -1,
+        delay: 3000,
+        showBeforeDelay: true,
+        repeatDelay: 5000,
+      });
+
+      // scale 2 (initial) size
+      // this.wizzardSprite = this.add.sprite(x + 32, y - 38, "atlas", "idle/frog-idle-1.png");
+      // this.wizzardSprite.setScale(2);
+      // scale 4 (final) size
+      this.wizzardSprite = this.add.sprite(x + 48, y - 92, "atlas", "idle/frog-idle-1.png");
+      this.wizzardSprite.setScale(4);
+
+      this.wizzardSprite.setOrigin(0, 0);
     }
   }
 
