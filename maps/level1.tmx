@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="300" height="50" tilewidth="16" tileheight="16" infinite="0" nextlayerid="25" nextobjectid="149">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="300" height="50" tilewidth="16" tileheight="16" infinite="0" nextlayerid="25" nextobjectid="155">
  <editorsettings>
   <export target="../public/maps/level1.json" format="json"/>
  </editorsettings>
@@ -647,6 +647,7 @@
   <object id="72" gid="1635" x="480.386" y="719.261" width="16" height="16"/>
   <object id="79" type="inaccessible" gid="1635" x="279.437" y="715.503" width="16" height="16"/>
   <object id="146" gid="1635" x="448" y="320" width="16" height="16"/>
+  <object id="152" gid="1645" x="1024" y="320" width="16" height="16"/>
  </objectgroup>
  <layer id="7" name="Hidden" width="300" height="50" opacity="0.66">
   <data encoding="csv">
@@ -706,7 +707,7 @@
   <object id="77" type="tutorial-shroom" gid="1673" x="175.768" y="720.108" width="16" height="16"/>
  </objectgroup>
  <objectgroup id="15" name="Enemies">
-  <object id="88" name="muddy" type="muddy" gid="2101" x="1199.7" y="64.1886" width="16" height="16"/>
+  <object id="88" name="muddy" type="muddy" gid="2101" x="928" y="96" width="16" height="16"/>
   <object id="95" type="mimic" gid="1577" x="848.513" y="687.472" width="16" height="16"/>
  </objectgroup>
  <objectgroup id="16" name="Health items">
@@ -732,7 +733,12 @@
   </object>
   <object id="148" name="Long moving vertical platform" type="platform-long" gid="178" x="1216" y="112" width="16" height="16">
    <properties>
-    <property name="moveY" type="int" value="25"/>
+    <property name="moveY" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="154" name="Long moving vertical platform" type="platform-long" gid="178" x="1248" y="112" width="16" height="16">
+   <properties>
+    <property name="moveY" type="int" value="5"/>
    </properties>
   </object>
  </objectgroup>
@@ -743,5 +749,8 @@
   <object id="113" gid="18" x="224" y="256" width="16" height="16"/>
   <object id="114" gid="18" x="304" y="256" width="16" height="16"/>
   <object id="121" gid="18" x="368" y="304" width="16" height="16"/>
+  <object id="149" gid="18" x="864" y="336" width="16" height="16"/>
+  <object id="150" gid="18" x="944" y="336" width="16" height="16"/>
+  <object id="151" gid="18" x="1024" y="336" width="16" height="16"/>
  </objectgroup>
 </map>
