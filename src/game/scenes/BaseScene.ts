@@ -174,7 +174,7 @@ export class BaseScene extends Phaser.Scene {
       props.objects.forEach((prop) => {
         const { x, y, width, height, type } = prop;
 
-        if (!x || !y || !width || !height) {
+        if ((!x && x !== 0) || !y || !width || !height) {
           throw new Error("Invalid prop object");
         }
 
@@ -196,13 +196,13 @@ export class BaseScene extends Phaser.Scene {
         // @ts-ignore
         const { x, y, width, height, type, properties } = platform;
 
-        if (!x || !y || !width || !height) {
+        if ((!x && x !== 0) || !y || !width || !height) {
           throw new Error("Invalid movable platform object");
         }
 
         switch (type) {
           case "platform-long":
-            this.movingPlatforms.add(new LongMovingPlatform(this, x, y, width, height, properties));
+            this.movingPlatforms.add(new LongMovingPlatform(this, x, y, properties));
             break;
           case "platform-short":
             // new ShortMovingPlatform(this, x, y, width, height, properties);
@@ -226,7 +226,7 @@ export class BaseScene extends Phaser.Scene {
       enemies.objects.forEach((enemy) => {
         const { x, y, type } = enemy;
 
-        if (!x || !y) {
+        if ((!x && x !== 0) || !y) {
           throw new Error("Invalid enemy object");
         }
 
@@ -259,7 +259,7 @@ export class BaseScene extends Phaser.Scene {
       gemObjectLayer.objects.forEach((tile) => {
         const { x, y, width, height } = tile;
 
-        if (!x || !y || !width || !height) {
+        if ((!x && x !== 0) || !y || !width || !height) {
           throw new Error("Invalid gem object");
         }
 
@@ -277,7 +277,7 @@ export class BaseScene extends Phaser.Scene {
       spikes.objects.forEach((spike) => {
         const { x, y, width, height, type } = spike;
 
-        if (!x || !y || !width || !height) {
+        if ((!x && x !== 0) || !y || !width || !height) {
           throw new Error("Invalid spike object");
         }
 
@@ -299,7 +299,7 @@ export class BaseScene extends Phaser.Scene {
       shroomObjectLayer.objects.forEach((tile) => {
         const { x, y, width, height } = tile;
 
-        if (!x || !y || !width || !height) {
+        if ((!x && x !== 0) || !y || !width || !height) {
           throw new Error("Invalid shroom object");
         }
 
@@ -320,7 +320,7 @@ export class BaseScene extends Phaser.Scene {
       healthItemObjectLayer.objects.forEach((tile) => {
         const { x, y, width, height, type } = tile;
 
-        if (!x || !y || !width || !height) {
+        if ((!x && x !== 0) || !y || !width || !height) {
           throw new Error("Invalid healthItem object");
         }
 
@@ -345,7 +345,7 @@ export class BaseScene extends Phaser.Scene {
 
     // const { x, y } = spawnPoint;
 
-    // if (!x || !y) {
+    // if ((!x && x !== 0) || !y) {
     //   throw new Error("Invalid spawn point");
     // }
 

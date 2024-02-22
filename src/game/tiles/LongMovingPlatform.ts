@@ -7,64 +7,82 @@ export class LongMovingPlatform extends Phaser.Physics.Arcade.Sprite {
    */
   body!: Phaser.Physics.Arcade.Body;
 
+  private debug = false;
+
   private moveXnumTiles: number;
   private originalX: number;
   private moveTargetX: number;
 
-  constructor(scene: BaseScene, x: number, y: number, width: number, height: number, properties: any) {
-    super(scene, x + width / 2, y - height, "atlas", "platform-long.png");
+  private direction!: "left" | "right";
+  private moveXSpeed = 100;
+
+  constructor(scene: BaseScene, x: number, y: number, properties: any) {
+    const height = 16;
+    super(scene, x + 16, y - 16, "atlas", "platform-long.png");
     this.scene = scene;
     this.scene.add.existing(this);
     this.scene.physics.add.existing(this, false);
     this.scene.physics.add.collider(this.scene.player, this);
-    this.body.setMaxVelocity(50, 0);
-    this.setMass(1);
     // fix platform in place
+    this.body.setMaxVelocityY(0);
     this.body.immovable = true;
     this.setDepth(10);
-    this.body.setSize(width, height);
-    this.body.setOffset(0, 0);
+    this.body.setSize(32, 16);
 
-    this.originalX = x;
+    this.originalX = this.x;
 
     const moveXProperty = properties.find((p: any) => p.name === "moveX");
     // moveX is the amount of tiles the platform should move
     // negative values move left, positive values move right
     this.moveXnumTiles = moveXProperty ? moveXProperty.value : 0;
+    this.direction = this.moveXnumTiles > 0 ? "right" : "left";
+
     this.moveTargetX = this.x + this.moveXnumTiles * 16;
 
-    this.scene.add.rectangle(this.originalX + 8, y - 8, 16, 16, 0x00ff00, 0.5).setDepth(100);
-    this.scene.add.rectangle(this.moveTargetX - 8, y - 8, 16, 16, 0xff0000, 0.5).setDepth(100);
+    if (this.direction === "right") {
+      this.moveTargetX += 16;
+    } else {
+      this.moveTargetX -= 16;
+    }
+    const moveXSpeedProperty = properties.find((p: any) => p.name === "moveXSpeed");
+    // moveXSpeed is the velocity the platform should move at
+    this.moveXSpeed = moveXSpeedProperty ? moveXSpeedProperty.value : this.moveXSpeed;
 
-    console.log("moveX", this.moveXnumTiles);
-    console.log("moveTargetX", this.moveTargetX);
+    if (this.debug) {
+      if (this.moveXnumTiles > 0) {
+        this.scene.add.line(this.moveTargetX, y - 8, 0, 0, 0, height, 0xff0000, 0.5).setDepth(100);
+        this.scene.add.line(this.originalX - 16, y - 8, 0, 0, 0, height, 0x00ff00, 0.5).setDepth(100);
+      } else {
+        this.scene.add.line(this.moveTargetX, y - 8, 0, 0, 0, height, 0xff0000, 0.5).setDepth(100);
+        this.scene.add.line(this.originalX + 16, y - 8, 0, 0, 0, height, 0x00ff00, 0.5).setDepth(100);
+      }
+    }
   }
 
   reverse(right: boolean = true) {
-    console.log(`reversing to the ${right ? "right" : "left"}`);
+    // console.log(`reversing to the ${right ? "right" : "left"}`);
     this.moveXnumTiles = -this.moveXnumTiles;
-    this.setVelocityX(0);
-    this.setVelocityX(right ? 50 : -50);
   }
 
   update() {
-    const x = Math.floor(this.x);
-
+    // console.log({ x: this.x, moveTargetX: this.moveTargetX, originalX: this.originalX });
     // moving left
-    if (this.moveXnumTiles < 0 && x >= this.moveTargetX) {
-      if (x === this.moveTargetX) {
+    if (this.moveXnumTiles < 0) {
+      if (
+        (this.direction === "right" && this.x < this.moveTargetX - 16) ||
+        (this.direction === "left" && this.x < this.moveTargetX + 16)
+      ) {
         this.reverse(); // reverse to the right
       } else {
-        console.log("moving left");
-        this.setVelocityX(-50);
+        // console.log("moving left");
+        this.setVelocityX(-this.moveXSpeed);
       }
       // moving right
-    } else if (this.moveXnumTiles > 0 && x <= this.originalX) {
-      if (x === this.originalX) {
+    } else if (this.moveXnumTiles > 0) {
+      if (this.x > this.originalX) {
         this.reverse(false); // reverse to the left
       } else {
-        console.log("moving right");
-        this.setVelocityX(50);
+        this.setVelocityX(this.moveXSpeed);
       }
     }
   }
