@@ -2,8 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import Phaser from "phaser";
 import GameOverScreen from "./GameOverScreen";
 import { GAME_HEIGHT, GAME_WIDTH, GameState } from "./constants";
-import { Level1 } from "./scenes/Level1";
-import { Preload } from "./scenes/Preload";
+import { Level1 } from "./game/scenes/Level1";
+import { Preload } from "./game/scenes/Preload";
 
 const App: React.FC = () => {
   const [gameState, setGameState] = useState<GameState>(GameState.RUNNING);

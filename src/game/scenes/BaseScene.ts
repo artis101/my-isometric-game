@@ -1,6 +1,6 @@
 import { Overlay } from "../UI/Overlay";
 import { Player } from "../characters/Player";
-import { GAME_HEIGHT, GAME_WIDTH } from "../constants";
+import { GAME_HEIGHT, GAME_WIDTH } from "../../constants";
 import { HealthPotion } from "../items/HealthPotion";
 import { BigHealthPotion } from "../items/BigHealthPotion";
 import { Gem } from "../items/Gem";
@@ -8,6 +8,7 @@ import { Shroom } from "../items/Shroom";
 import { Spikes } from "../items/Spikes";
 import { Muddy } from "../enemies/Muddy";
 import { Mimic } from "../enemies/Mimic";
+import { LongMovingPlatform } from "../tiles/LongMovingPlatform";
 
 export class BaseScene extends Phaser.Scene {
   // game variables
@@ -25,6 +26,9 @@ export class BaseScene extends Phaser.Scene {
   // background and middleground for parallax effect
   private background!: Phaser.GameObjects.TileSprite;
   private middleground!: Phaser.GameObjects.TileSprite;
+
+  // moving platforms
+  private movingPlatforms!: Phaser.GameObjects.Group;
 
   // characters
   public player!: Player;
@@ -46,6 +50,7 @@ export class BaseScene extends Phaser.Scene {
     // these all are asset based
     this.setupProps();
     // enemies is an object layer in Tiled
+    this.setupMovingPlatforms();
     this.setupEnemies();
     this.setupGems();
     this.setupSpikes();
@@ -174,6 +179,37 @@ export class BaseScene extends Phaser.Scene {
         }
 
         this.add.sprite(x + width / 2, y - height, "atlas", `${type}.png`);
+      });
+    }
+  }
+
+  setupMovingPlatforms() {
+    const movingPlatforms = this.map.getObjectLayer("Moving platforms");
+
+    if (movingPlatforms) {
+      this.movingPlatforms = this.add.group(undefined, {
+        classType: Gem,
+        runChildUpdate: true,
+      });
+
+      movingPlatforms.objects.forEach((platform) => {
+        // @ts-ignore
+        const { x, y, width, height, type, properties } = platform;
+
+        if (!x || !y || !width || !height) {
+          throw new Error("Invalid movable platform object");
+        }
+
+        switch (type) {
+          case "platform-long":
+            this.movingPlatforms.add(new LongMovingPlatform(this, x, y, width, height, properties));
+            break;
+          case "platform-short":
+            // new ShortMovingPlatform(this, x, y, width, height, properties);
+            break;
+          default:
+            throw new Error(`Unknown movable platform type: ${type}`);
+        }
       });
     }
   }

@@ -25,7 +25,7 @@ export class Level1 extends BaseScene {
     // this.player = new Player(this, 26, 580, Player.MAX_HIT_POINTS);
     // up the stairs spawn point
     // this.player = new Player(this, 792, 14, Player.MAX_HIT_POINTS);
-    this.player = new Player(this, 1030, 580, 2.5);
+    this.player = new Player(this, 352, 84, 2.5);
   }
 
   markPlayerMoved() {
