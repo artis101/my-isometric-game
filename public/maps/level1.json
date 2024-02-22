@@ -1080,13 +1080,19 @@
         {
          "draworder":"topdown",
          "id":24,
-         "name":"Crumbling platforms",
+         "name":"Disappearing blocks",
          "objects":[
                 {
                  "gid":18,
                  "height":16,
                  "id":107,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"speed",
+                         "type":"int",
+                         "value":300
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1097,20 +1103,14 @@
                 {
                  "gid":18,
                  "height":16,
-                 "id":110,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":848,
-                 "y":560
-                }, 
-                {
-                 "gid":18,
-                 "height":16,
                  "id":149,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"speed",
+                         "type":"int",
+                         "value":300
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1123,6 +1123,12 @@
                  "height":16,
                  "id":150,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"speed",
+                         "type":"int",
+                         "value":300
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1135,6 +1141,12 @@
                  "height":16,
                  "id":151,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"speed",
+                         "type":"int",
+                         "value":300
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1156,7 +1168,7 @@
                         {
                          "name":"speed",
                          "type":"int",
-                         "value":200
+                         "value":300
                         }],
                  "rotation":0,
                  "type":"",
@@ -1179,7 +1191,7 @@
                         {
                          "name":"speed",
                          "type":"int",
-                         "value":200
+                         "value":300
                         }],
                  "rotation":0,
                  "type":"",
@@ -1202,7 +1214,7 @@
                         {
                          "name":"speed",
                          "type":"int",
-                         "value":200
+                         "value":300
                         }],
                  "rotation":0,
                  "type":"",
@@ -1225,7 +1237,7 @@
                         {
                          "name":"speed",
                          "type":"int",
-                         "value":200
+                         "value":300
                         }],
                  "rotation":0,
                  "type":"",
@@ -1248,7 +1260,7 @@
                         {
                          "name":"speed",
                          "type":"int",
-                         "value":200
+                         "value":300
                         }],
                  "rotation":0,
                  "type":"",
@@ -1271,7 +1283,7 @@
                         {
                          "name":"speed",
                          "type":"int",
-                         "value":200
+                         "value":300
                         }],
                  "rotation":0,
                  "type":"",
@@ -1294,7 +1306,7 @@
                         {
                          "name":"speed",
                          "type":"int",
-                         "value":200
+                         "value":300
                         }],
                  "rotation":0,
                  "type":"",
@@ -1317,7 +1329,7 @@
                         {
                          "name":"speed",
                          "type":"int",
-                         "value":200
+                         "value":300
                         }],
                  "rotation":0,
                  "type":"",
@@ -1340,7 +1352,7 @@
                         {
                          "name":"speed",
                          "type":"int",
-                         "value":200
+                         "value":300
                         }],
                  "rotation":0,
                  "type":"",
@@ -1363,7 +1375,7 @@
                         {
                          "name":"speed",
                          "type":"int",
-                         "value":200
+                         "value":300
                         }],
                  "rotation":0,
                  "type":"",
@@ -1386,7 +1398,7 @@
                         {
                          "name":"speed",
                          "type":"int",
-                         "value":200
+                         "value":300
                         }],
                  "rotation":0,
                  "type":"",
@@ -1409,7 +1421,7 @@
                         {
                          "name":"speed",
                          "type":"int",
-                         "value":200
+                         "value":300
                         }],
                  "rotation":0,
                  "type":"",
@@ -1432,7 +1444,7 @@
                         {
                          "name":"speed",
                          "type":"int",
-                         "value":200
+                         "value":300
                         }],
                  "rotation":0,
                  "type":"",
@@ -1455,7 +1467,7 @@
                         {
                          "name":"speed",
                          "type":"int",
-                         "value":200
+                         "value":300
                         }],
                  "rotation":0,
                  "type":"",
@@ -1478,7 +1490,7 @@
                         {
                          "name":"speed",
                          "type":"int",
-                         "value":200
+                         "value":300
                         }],
                  "rotation":0,
                  "type":"",

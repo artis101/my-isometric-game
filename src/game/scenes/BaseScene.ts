@@ -9,6 +9,7 @@ import { Spikes } from "../items/Spikes";
 import { Muddy } from "../enemies/Muddy";
 import { Mimic } from "../enemies/Mimic";
 import { LongMovingPlatform } from "../tiles/LongMovingPlatform";
+import { DisappearingBlock } from "../tiles/DisappearingBlock";
 
 export class BaseScene extends Phaser.Scene {
   // game variables
@@ -54,6 +55,7 @@ export class BaseScene extends Phaser.Scene {
     this.setupProps();
     // enemies is an object layer in Tiled
     this.setupMovingPlatforms();
+    this.setupDisappearingBlocks();
     this.setupEnemies();
     this.setupGems();
     this.setupSpikes();
@@ -239,6 +241,26 @@ export class BaseScene extends Phaser.Scene {
           default:
             throw new Error(`Unknown movable platform type: ${type}`);
         }
+      });
+    }
+  }
+
+  setupDisappearingBlocks() {
+    const disappearingBlocks = this.map.getObjectLayer("Disappearing blocks");
+
+    if (disappearingBlocks) {
+      disappearingBlocks.objects.forEach((block) => {
+        const { x, y, properties } = block;
+
+        if ((!x && x !== 0) || !y) {
+          throw new Error("Invalid disappearing block object");
+        }
+
+        if (!properties) {
+          throw new Error("Disappearing block missing properties");
+        }
+
+        new DisappearingBlock(this, x, y, properties);
       });
     }
   }

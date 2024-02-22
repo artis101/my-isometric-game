@@ -759,100 +759,115 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="24" name="Crumbling platforms">
-  <object id="107" gid="18" x="304" y="416" width="16" height="16"/>
-  <object id="110" gid="18" x="848" y="560" width="16" height="16"/>
-  <object id="149" gid="18" x="864" y="336" width="16" height="16"/>
-  <object id="150" gid="18" x="944" y="336" width="16" height="16"/>
-  <object id="151" gid="18" x="1024" y="336" width="16" height="16"/>
+ <objectgroup id="24" name="Disappearing blocks">
+  <object id="107" gid="18" x="304" y="416" width="16" height="16">
+   <properties>
+    <property name="speed" type="int" value="300"/>
+   </properties>
+  </object>
+  <object id="149" gid="18" x="864" y="336" width="16" height="16">
+   <properties>
+    <property name="speed" type="int" value="300"/>
+   </properties>
+  </object>
+  <object id="150" gid="18" x="944" y="336" width="16" height="16">
+   <properties>
+    <property name="speed" type="int" value="300"/>
+   </properties>
+  </object>
+  <object id="151" gid="18" x="1024" y="336" width="16" height="16">
+   <properties>
+    <property name="speed" type="int" value="300"/>
+   </properties>
+  </object>
   <object id="183" gid="18" x="96" y="256" width="16" height="16">
    <properties>
     <property name="disappearing" type="bool" value="false"/>
-    <property name="speed" type="int" value="200"/>
+    <property name="speed" type="int" value="300"/>
    </properties>
   </object>
   <object id="193" gid="18" x="112" y="256" width="16" height="16">
    <properties>
     <property name="disappearing" type="bool" value="true"/>
-    <property name="speed" type="int" value="200"/>
+    <property name="speed" type="int" value="300"/>
    </properties>
   </object>
   <object id="194" gid="18" x="128" y="256" width="16" height="16">
    <properties>
     <property name="disappearing" type="bool" value="true"/>
-    <property name="speed" type="int" value="200"/>
+    <property name="speed" type="int" value="300"/>
    </properties>
   </object>
   <object id="195" gid="18" x="144" y="256" width="16" height="16">
    <properties>
     <property name="disappearing" type="bool" value="false"/>
-    <property name="speed" type="int" value="200"/>
+    <property name="speed" type="int" value="300"/>
    </properties>
   </object>
   <object id="196" gid="18" x="160" y="256" width="16" height="16">
    <properties>
     <property name="disappearing" type="bool" value="true"/>
-    <property name="speed" type="int" value="200"/>
+    <property name="speed" type="int" value="300"/>
    </properties>
   </object>
   <object id="197" gid="18" x="176" y="256" width="16" height="16">
    <properties>
     <property name="disappearing" type="bool" value="true"/>
-    <property name="speed" type="int" value="200"/>
+    <property name="speed" type="int" value="300"/>
    </properties>
   </object>
   <object id="198" gid="18" x="192" y="256" width="16" height="16">
    <properties>
     <property name="disappearing" type="bool" value="true"/>
-    <property name="speed" type="int" value="200"/>
+    <property name="speed" type="int" value="300"/>
    </properties>
   </object>
   <object id="199" gid="18" x="208" y="256" width="16" height="16">
    <properties>
     <property name="disappearing" type="bool" value="false"/>
-    <property name="speed" type="int" value="200"/>
+    <property name="speed" type="int" value="300"/>
    </properties>
   </object>
   <object id="200" gid="18" x="224" y="256" width="16" height="16">
    <properties>
     <property name="disappearing" type="bool" value="true"/>
-    <property name="speed" type="int" value="200"/>
+    <property name="speed" type="int" value="300"/>
    </properties>
   </object>
   <object id="201" gid="18" x="240" y="256" width="16" height="16">
    <properties>
     <property name="disappearing" type="bool" value="true"/>
-    <property name="speed" type="int" value="200"/>
+    <property name="speed" type="int" value="300"/>
    </properties>
   </object>
   <object id="202" gid="18" x="256" y="256" width="16" height="16">
    <properties>
     <property name="disappearing" type="bool" value="true"/>
-    <property name="speed" type="int" value="200"/>
+    <property name="speed" type="int" value="300"/>
    </properties>
   </object>
   <object id="203" gid="18" x="272" y="256" width="16" height="16">
    <properties>
     <property name="disappearing" type="bool" value="true"/>
-    <property name="speed" type="int" value="200"/>
+    <property name="speed" type="int" value="300"/>
    </properties>
   </object>
   <object id="204" gid="18" x="288" y="256" width="16" height="16">
    <properties>
     <property name="disappearing" type="bool" value="true"/>
-    <property name="speed" type="int" value="200"/>
+    <property name="speed" type="int" value="300"/>
    </properties>
   </object>
   <object id="205" gid="18" x="304" y="256" width="16" height="16">
    <properties>
     <property name="disappearing" type="bool" value="false"/>
-    <property name="speed" type="int" value="200"/>
+    <property name="speed" type="int" value="300"/>
    </properties>
   </object>
   <object id="228" gid="18" x="368" y="288" width="16" height="16">
    <properties>
     <property name="disappearing" type="bool" value="false"/>
-    <property name="speed" type="int" value="200"/>
+    <property name="speed" type="int" value="300"/>
    </properties>
   </object>
  </objectgroup>
