@@ -13,9 +13,12 @@ import { LongMovingPlatform } from "../tiles/LongMovingPlatform";
 export class BaseScene extends Phaser.Scene {
   // game variables
   protected map!: Phaser.Tilemaps.Tilemap;
+  private overlay!: Overlay;
+
+  // layers and tiles
   public ground!: Phaser.Tilemaps.TilemapLayer;
   public hidden!: Phaser.Tilemaps.TilemapLayer;
-  private overlay!: Overlay;
+  private passThroughRightTiles!: Phaser.Tilemaps.Tile[];
 
   // input keyInput
   public keyInput!: KeyInputKeys;
@@ -74,6 +77,20 @@ export class BaseScene extends Phaser.Scene {
     this.cameraDolly.y = Math.floor(this.player.y);
 
     this.overlay.update();
+
+    //  Custom tile overlap check
+    this.physics.world.overlapTiles(
+      this.player,
+      this.passThroughRightTiles,
+      (player, tile) => {
+        // @ts-ignore
+        if (tile.properties && tile.properties.passThroughRight) {
+          (player as Player).setVelocityX(-200);
+        }
+      },
+      undefined,
+      this
+    );
   }
 
   setupInput() {
@@ -143,6 +160,18 @@ export class BaseScene extends Phaser.Scene {
     if (topCollisionTitles) {
       topCollisionTitles.forEach((tile) => {
         tile.setCollision(false, false, true, false);
+      });
+    }
+
+    const passThroughRightTiles = this.ground.filterTiles(
+      (tile: any) => tile && tile.properties && tile.properties.passThroughRight
+    );
+
+    if (passThroughRightTiles) {
+      this.passThroughRightTiles = passThroughRightTiles;
+
+      passThroughRightTiles.forEach((tile) => {
+        tile.setCollision(true, false, true, true);
       });
     }
 

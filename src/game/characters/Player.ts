@@ -202,6 +202,7 @@ export class Player extends Phaser.Physics.Arcade.Sprite {
     if (this.isDead()) {
       this.anims.play("hurt", true);
       this.setVelocity(0, 0);
+      this.body.setImmovable(true);
     } else if (this.isHurting()) {
       this.anims.play("hurt", true);
       this.setVelocity(0, 0);

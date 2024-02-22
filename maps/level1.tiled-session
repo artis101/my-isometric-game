@@ -38,6 +38,12 @@
         "level1.tmx#atlas-terrain": {
             "scaleInDock": 1.1481
         },
+        "level1.tmx#characters": {
+            "scaleInEditor": 2.72
+        },
+        "level1.tmx#items": {
+            "scaleInEditor": 2.72
+        },
         "level1.tmx#props": {
             "scaleInDock": 1,
             "scaleInEditor": 0.68
@@ -59,7 +65,7 @@
         "level1.tmx"
     ],
     "project": "level1.tiled-project",
-    "property.type": "int",
+    "property.type": "bool",
     "recentFiles": [
         "level1.tmx",
         "props.tsx",
