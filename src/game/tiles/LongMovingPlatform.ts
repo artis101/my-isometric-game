@@ -10,7 +10,7 @@ export class LongMovingPlatform extends Phaser.Physics.Arcade.Sprite {
   static HEIGHT = 16;
   static WIDTH = 32;
 
-  private debug = true;
+  private debug = false;
 
   private originalY: number;
   private moveYnumTiles: number | undefined;
@@ -21,8 +21,8 @@ export class LongMovingPlatform extends Phaser.Physics.Arcade.Sprite {
   private moveTargetX: number | undefined;
 
   private movementDirection!: "left" | "right" | "up" | "down";
-  private moveXSpeed = 50;
-  private moveYSpeed = 50;
+  private moveXSpeed = 100;
+  private moveYSpeed = 100;
 
   constructor(scene: BaseScene, x: number, y: number, properties: any) {
     super(scene, x + LongMovingPlatform.WIDTH / 2, y - LongMovingPlatform.HEIGHT, "atlas", "platform-long.png");
@@ -33,7 +33,7 @@ export class LongMovingPlatform extends Phaser.Physics.Arcade.Sprite {
     this.setSize(LongMovingPlatform.WIDTH, LongMovingPlatform.HEIGHT);
     this.setImmovable(true);
     this.setGravity(0);
-    this.setMass(0);
+    this.setMass(1);
     this.setDepth(10);
 
     this.originalX = this.x;
@@ -48,7 +48,7 @@ export class LongMovingPlatform extends Phaser.Physics.Arcade.Sprite {
     // horizontal movement
     if (moveXProperty) {
       // fix platform in place
-      this.body.setMaxVelocity(400, 0);
+      this.body.setMaxVelocity(100, 0);
       // the amount of tiles the platform should move
       // negative values move left, positive values move right
       this.moveXnumTiles = moveXProperty.value;
@@ -56,7 +56,7 @@ export class LongMovingPlatform extends Phaser.Physics.Arcade.Sprite {
       this.moveXSpeed = moveXSpeedProperty ? moveXSpeedProperty.value : this.moveXSpeed;
       this.setupHorizontalMovement();
     } else if (moveYProperty) {
-      this.body.setMaxVelocity(0, 50);
+      this.body.setMaxVelocity(0, 100);
       // vertical movement
       this.moveYnumTiles = moveYProperty.value;
       this.moveYnumTiles = moveYProperty.value;
@@ -184,7 +184,6 @@ export class LongMovingPlatform extends Phaser.Physics.Arcade.Sprite {
       if (this.x <= this.moveTargetX!) {
         this.reverseHorizontal(); // reverse to the right
       } else {
-        // console.log("moving left");
         this.setVelocityX(-this.moveXSpeed);
       }
     } else {

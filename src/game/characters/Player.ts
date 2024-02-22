@@ -5,7 +5,7 @@ const PLAYER_MOVE_VELOCITY = 160;
 const PLAYER_JUMP_VELOCITY = -300;
 const PLAYER_MAX_VELOCITY = 800;
 const PLAYER_MASS = 10;
-const PLAYER_BOUNCE = 0.2;
+const PLAYER_BOUNCE = 0.1;
 const PLAYER_HITPOINTS = 3.0;
 const FALL_DAMAGE_VELOCITY_THRESHOLD = 400;
 
@@ -119,6 +119,7 @@ export class Player extends Phaser.Physics.Arcade.Sprite {
   }
 
   public hurt(amount: number) {
+    console.log("hurt", amount, this.hitPoints, this.scene.time.now - this.lastHitTime);
     this.lastHitTime = this.scene.time.now;
     this.hitPoints = Math.max(this.hitPoints - amount, 0);
     this.blink();

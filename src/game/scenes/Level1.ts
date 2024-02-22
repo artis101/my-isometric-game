@@ -24,13 +24,14 @@ export class Level1 extends BaseScene {
     // start of level spawn point
     // this.player = new Player(this, 26, 580, Player.MAX_HIT_POINTS);
     // up the stairs spawn point
-    // this.player = new Player(this, 792, 14, Player.MAX_HIT_POINTS);
+    this.player = new Player(this, 792, 14, Player.MAX_HIT_POINTS);
     // up top fast moving platform
     // this.player = new Player(this, 45, 60, 3);
     // near secret cave entrance
     // this.player = new Player(this, 1090, 500, 3);
     // top vertical platform
-    this.player = new Player(this, 1205, 50, 3);
+    // this.player = new Player(this, 1205, 50, 3);
+    // this.player = new Player(this, 1905, 450, 3);
   }
 
   markPlayerMoved() {

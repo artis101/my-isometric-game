@@ -1,13 +1,7 @@
 import { BaseScene } from "../scenes/BaseScene";
+import { Pattroller } from "./Patroller";
 
-export class Muddy extends Phaser.Physics.Arcade.Sprite {
-  public scene: BaseScene;
-
-  /**
-   * This Game Object's Physics Body.
-   */
-  body!: Phaser.Physics.Arcade.Body;
-
+export class Muddy extends Pattroller {
   private isDead = false;
 
   constructor(scene: BaseScene, x: number, y: number) {
@@ -19,7 +13,6 @@ export class Muddy extends Phaser.Physics.Arcade.Sprite {
     this.setMass(1);
     this.setDepth(10);
     this.setSize(16, 16);
-    this.setOffset(0, 0);
     this.setBounce(0);
 
     this.scene.anims.create({
@@ -83,31 +76,11 @@ export class Muddy extends Phaser.Physics.Arcade.Sprite {
           },
         });
       }
+      return;
     } else {
       this.anims.play("muddy", true);
     }
 
-    // walk back and forth on the platform
-    if (this.body.onFloor()) {
-      // get the dimensions of the platform we are walking on
-      const tileBelow = this.scene.ground.getTileAtWorldXY(this.x, this.y + 16);
-
-      if (!tileBelow) {
-        return;
-      }
-
-      const tileBelowToTheRight = this.scene.ground.getTileAtWorldXY(this.x + 16, this.y + 16);
-      const tileBelowToTheLeft = this.scene.ground.getTileAtWorldXY(this.x - 16, this.y + 16);
-
-      // if we are at the edge of the platform, turn around
-      if (tileBelowToTheRight && !tileBelowToTheLeft) {
-        this.setFlipX(true);
-        this.body.setVelocityX(100);
-      } else if (tileBelowToTheLeft && !tileBelowToTheRight) {
-        this.body.setVelocityX(-100);
-      } else if (!tileBelowToTheLeft && !tileBelowToTheRight) {
-        this.body.setVelocityX(0);
-      }
-    }
+    super.update();
   }
 }
