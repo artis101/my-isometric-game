@@ -21,8 +21,8 @@ export class LongMovingPlatform extends Phaser.Physics.Arcade.Sprite {
   private moveTargetX: number | undefined;
 
   private movementDirection!: "left" | "right" | "up" | "down";
-  private moveXSpeed = 100;
-  private moveYSpeed = 100;
+  private moveXSpeed = 50;
+  private moveYSpeed = 50;
 
   constructor(scene: BaseScene, x: number, y: number, properties: any) {
     super(scene, x + LongMovingPlatform.WIDTH / 2, y - LongMovingPlatform.HEIGHT, "atlas", "platform-long.png");
@@ -30,9 +30,11 @@ export class LongMovingPlatform extends Phaser.Physics.Arcade.Sprite {
     this.scene.add.existing(this);
     this.scene.physics.add.existing(this, false);
     this.scene.physics.add.collider(this.scene.player, this);
-    this.body.immovable = true;
+    this.setSize(LongMovingPlatform.WIDTH, LongMovingPlatform.HEIGHT);
+    this.setImmovable(true);
+    this.setGravity(0);
+    this.setMass(0);
     this.setDepth(10);
-    this.body.setSize(LongMovingPlatform.WIDTH, LongMovingPlatform.HEIGHT);
 
     this.originalX = this.x;
     this.originalY = this.y;
@@ -54,7 +56,7 @@ export class LongMovingPlatform extends Phaser.Physics.Arcade.Sprite {
       this.moveXSpeed = moveXSpeedProperty ? moveXSpeedProperty.value : this.moveXSpeed;
       this.setupHorizontalMovement();
     } else if (moveYProperty) {
-      this.body.setMaxVelocity(0, 400);
+      this.body.setMaxVelocity(0, 50);
       // vertical movement
       this.moveYnumTiles = moveYProperty.value;
       this.moveYnumTiles = moveYProperty.value;
@@ -71,25 +73,11 @@ export class LongMovingPlatform extends Phaser.Physics.Arcade.Sprite {
     this.moveTargetX = this.x + this.moveXnumTiles! * 16;
 
     if (this.movementDirection === "right") {
-      this.moveTargetX += 16;
-    } else {
       this.moveTargetX -= 16;
     }
 
     if (this.debug) {
       if (this.moveXnumTiles! > 0) {
-        this.scene.add
-          .line(
-            this.moveTargetX,
-            this.y + LongMovingPlatform.HEIGHT / 2,
-            0,
-            0,
-            0,
-            LongMovingPlatform.HEIGHT,
-            0xff0000,
-            0.5
-          )
-          .setDepth(100);
         this.scene.add
           .line(
             this.originalX - LongMovingPlatform.HEIGHT,
@@ -102,10 +90,9 @@ export class LongMovingPlatform extends Phaser.Physics.Arcade.Sprite {
             0.5
           )
           .setDepth(100);
-      } else {
         this.scene.add
           .line(
-            this.moveTargetX,
+            this.moveTargetX + 16,
             this.y + LongMovingPlatform.HEIGHT / 2,
             0,
             0,
@@ -115,6 +102,7 @@ export class LongMovingPlatform extends Phaser.Physics.Arcade.Sprite {
             0.5
           )
           .setDepth(100);
+      } else {
         this.scene.add
           .line(
             this.originalX + LongMovingPlatform.HEIGHT,
@@ -127,19 +115,29 @@ export class LongMovingPlatform extends Phaser.Physics.Arcade.Sprite {
             0.5
           )
           .setDepth(100);
+        this.scene.add
+          .line(
+            this.moveTargetX - 16,
+            this.y + LongMovingPlatform.HEIGHT / 2,
+            0,
+            0,
+            0,
+            LongMovingPlatform.HEIGHT,
+            0xff0000,
+            0.5
+          )
+          .setDepth(100);
       }
     }
   }
 
   setupVerticalMovement() {
-    this.movementDirection = this.moveYnumTiles! > 0 ? "up" : "down";
+    this.movementDirection = this.moveYnumTiles! < 0 ? "up" : "down";
 
     this.moveTargetY = this.y + this.moveYnumTiles! * 16;
 
-    if (this.movementDirection === "down") {
+    if (this.movementDirection === "up") {
       this.moveTargetY += 16;
-    } else {
-      this.moveTargetY -= 16;
     }
 
     if (this.debug) {
@@ -182,56 +180,76 @@ export class LongMovingPlatform extends Phaser.Physics.Arcade.Sprite {
   }
 
   handleLeftHorizontalMovement() {
-    // moving left
-    if (
-      (this.movementDirection === "right" && this.x < this.moveTargetX! - 16) ||
-      (this.movementDirection === "left" && this.x < this.moveTargetX! + 16)
-    ) {
-      this.reverseHorizontal(); // reverse to the right
+    if (this.movementDirection === "left") {
+      if (this.x <= this.moveTargetX!) {
+        this.reverseHorizontal(); // reverse to the right
+      } else {
+        // console.log("moving left");
+        this.setVelocityX(-this.moveXSpeed);
+      }
     } else {
-      // console.log("moving left");
-      this.setVelocityX(-this.moveXSpeed);
+      if (this.x <= this.originalX) {
+        this.reverseHorizontal(); // reverse to the right
+      } else {
+        this.setVelocityX(-this.moveXSpeed);
+      }
     }
   }
 
   handleRightHorizontalMovement() {
-    if (this.x > this.originalX) {
-      this.reverseHorizontal(); // reverse to the left
+    if (this.movementDirection === "left") {
+      if (this.x >= this.originalX) {
+        this.reverseHorizontal(); // reverse to the left
+      } else {
+        this.setVelocityX(this.moveXSpeed);
+      }
     } else {
-      this.setVelocityX(this.moveXSpeed);
+      if (this.x >= this.moveTargetX! + 32) {
+        this.reverseHorizontal(); // reverse to the left
+      } else {
+        this.setVelocityX(this.moveXSpeed);
+      }
     }
   }
 
   handleVerticalMovement() {
-    console.log({
-      moveYnumTiles: this.moveYnumTiles,
-      y: this.y,
-      moveTargetY: this.moveTargetY,
-    });
-
     if (this.moveYnumTiles! > 0) {
-      console.log("moving up");
       this.handleUpVerticalMovement();
       // moving down
     } else if (this.moveYnumTiles! < 0) {
-      console.log("moving down");
       this.handleDownVerticalMovement();
     }
   }
 
   handleUpVerticalMovement() {
-    if (this.y < this.originalY) {
-      this.reverseVertical(); // reverse to the left
+    if (this.movementDirection === "down") {
+      if (this.y <= this.originalY) {
+        this.reverseVertical(); // reverse to the left
+      } else {
+        this.setVelocityY(-this.moveYSpeed);
+      }
     } else {
-      this.setVelocityY(-this.moveYSpeed);
+      if (this.y <= this.moveTargetY! - 16) {
+        this.reverseVertical(); // reverse to the left
+      } else {
+        this.setVelocityY(-this.moveYSpeed);
+      }
     }
   }
 
   handleDownVerticalMovement() {
-    if (this.y > this.moveTargetY!) {
-      this.reverseVertical(); // reverse to the left
+    if (this.movementDirection === "down") {
+      if (this.y > this.moveTargetY!) {
+        this.reverseVertical(); // reverse to the left
+      } else {
+        this.setVelocityY(this.moveYSpeed);
+      }
     } else {
-      this.setVelocityY(this.moveYSpeed);
+      if (this.y > this.originalY!!) {
+        this.reverseVertical(); // reverse to the left
+      } else {
+        this.setVelocityY(this.moveYSpeed);
+      }
     }
   }
 }

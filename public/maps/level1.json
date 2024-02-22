@@ -791,7 +791,7 @@
                         {
                          "name":"moveY",
                          "type":"int",
-                         "value":5
+                         "value":2
                         }],
                  "rotation":0,
                  "type":"platform-long",
@@ -809,13 +809,49 @@
                         {
                          "name":"moveY",
                          "type":"int",
-                         "value":-3
+                         "value":-2
                         }],
                  "rotation":0,
                  "type":"platform-long",
                  "visible":true,
                  "width":16,
                  "x":1248,
+                 "y":112
+                }, 
+                {
+                 "gid":178,
+                 "height":16,
+                 "id":156,
+                 "name":"Long moving vertical platform",
+                 "properties":[
+                        {
+                         "name":"moveX",
+                         "type":"int",
+                         "value":-1
+                        }],
+                 "rotation":0,
+                 "type":"platform-long",
+                 "visible":true,
+                 "width":16,
+                 "x":1360,
+                 "y":112
+                }, 
+                {
+                 "gid":178,
+                 "height":16,
+                 "id":157,
+                 "name":"Long moving vertical platform",
+                 "properties":[
+                        {
+                         "name":"moveX",
+                         "type":"int",
+                         "value":1
+                        }],
+                 "rotation":0,
+                 "type":"platform-long",
+                 "visible":true,
+                 "width":16,
+                 "x":1280,
                  "y":112
                 }],
          "opacity":1,
@@ -950,7 +986,7 @@
          "y":0
         }],
  "nextlayerid":25,
- "nextobjectid":155,
+ "nextobjectid":158,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.10.2",

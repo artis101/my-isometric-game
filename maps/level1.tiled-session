@@ -65,7 +65,7 @@
         "level1.tmx"
     ],
     "project": "level1.tiled-project",
-    "property.type": "bool",
+    "property.type": "int",
     "recentFiles": [
         "level1.tmx",
         "props.tsx",
