@@ -48,7 +48,7 @@ export class LongMovingPlatform extends Phaser.Physics.Arcade.Sprite {
     // horizontal movement
     if (moveXProperty) {
       // fix platform in place
-      this.body.setMaxVelocity(100, 0);
+      this.body.setMaxVelocity(250, 0);
       // the amount of tiles the platform should move
       // negative values move left, positive values move right
       this.moveXnumTiles = moveXProperty.value;
@@ -56,7 +56,7 @@ export class LongMovingPlatform extends Phaser.Physics.Arcade.Sprite {
       this.moveXSpeed = moveXSpeedProperty ? moveXSpeedProperty.value : this.moveXSpeed;
       this.setupHorizontalMovement();
     } else if (moveYProperty) {
-      this.body.setMaxVelocity(0, 100);
+      this.body.setMaxVelocity(0, 150);
       // vertical movement
       this.moveYnumTiles = moveYProperty.value;
       this.moveYnumTiles = moveYProperty.value;
