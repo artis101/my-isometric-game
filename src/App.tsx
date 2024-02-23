@@ -19,7 +19,7 @@ const App: React.FC = () => {
         default: "arcade",
         arcade: {
           gravity: { y: 800 },
-          debug: false,
+          // debug: true,
         },
       },
       scene: [Preload, Level1],

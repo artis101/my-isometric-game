@@ -43,8 +43,8 @@ export class Player extends Phaser.Physics.Arcade.Sprite {
     this.setMass(PLAYER_MASS);
     this.setMaxVelocity(PLAYER_MAX_VELOCITY, PLAYER_MAX_VELOCITY);
     this.setCollideWorldBounds(true);
-    this.body.setSize(16, 24);
-    this.body.setOffset(16, 8);
+    this.setSize(16, 24);
+    this.setOffset(16, 8);
     this.setDepth(10);
     this.hitPoints = hitPoints;
 

@@ -1,5 +1,6 @@
 import { BaseScene } from "./BaseScene";
 import { Player } from "../characters/Player";
+import { WizzardFrog } from "../../npcs/WizzardFrog";
 
 export class Level1 extends BaseScene {
   private introText!: Phaser.GameObjects.BitmapText;
@@ -16,43 +17,11 @@ export class Level1 extends BaseScene {
   // time when player ate the mushroom
   private playerAteMushroomTime = 0;
 
+  // boss
+  private wizzard!: WizzardFrog;
+
   constructor() {
     super("level1");
-  }
-
-  setupPlayer() {
-    // start of level spawn point
-    // this.player = new Player(this, 26, 580, Player.MAX_HIT_POINTS);
-    // up the stairs spawn point
-    // this.player = new Player(this, 792, 14, Player.MAX_HIT_POINTS);
-    // up top fast moving platform
-    // this.player = new Player(this, 45, 60, 3);
-    // next to falling blocks
-    // this.player = new Player(this, 85, 200, 3);
-    // near secret cave entrance
-    // this.player = new Player(this, 1090, 500, 3);
-    // top vertical platform
-    // this.player = new Player(this, 1205, 50, 3);
-    // this.player = new Player(this, 1905, 450, 3);
-    // wizzard room
-    this.player = new Player(this, 1920, 900, 3);
-  }
-
-  markPlayerMoved() {
-    this.playerMoved = true;
-  }
-
-  markPlayerJumped() {
-    this.playerJumped = true;
-  }
-
-  markPlayerAteMushroom() {
-    this.playerAteMushroom = true;
-    this.playerAteMushroomTime = this.time.now;
-  }
-
-  preload() {
-    this.load.tilemapTiledJSON("map", "maps/level1.json");
   }
 
   create() {
@@ -63,6 +32,8 @@ export class Level1 extends BaseScene {
     }
 
     super.create();
+
+    this.setupWizzardBoss();
 
     // intro text
     this.introText = this.add
@@ -93,6 +64,59 @@ export class Level1 extends BaseScene {
       .bitmapText(620, 680, "atari", "You made it!\n..but there's nothing on this side.\nGo up", 10)
       .setCenterAlign()
       .setDepth(1);
+  }
+
+  setupPlayer() {
+    // start of level spawn point
+    // this.player = new Player(this, 26, 580, Player.MAX_HIT_POINTS);
+    // up the stairs spawn point
+    // this.player = new Player(this, 792, 14, Player.MAX_HIT_POINTS);
+    // up top fast moving platform
+    // this.player = new Player(this, 45, 60, 3);
+    // next to falling blocks
+    // this.player = new Player(this, 85, 200, 3);
+    // near secret cave entrance
+    // this.player = new Player(this, 1090, 500, 3);
+    // top vertical platform
+    // this.player = new Player(this, 1205, 50, 3);
+    // this.player = new Player(this, 1905, 450, 3);
+    // wizzard room
+    this.player = new Player(this, 1920, 900, 3);
+  }
+
+  setupWizzardBoss() {
+    // add object layer spikes
+    const wizzard = this.map.getObjectLayer("Wizzard");
+
+    if (wizzard) {
+      const objectImageProps = wizzard.objects[0];
+
+      const { x, y, width, height } = objectImageProps;
+
+      if ((!x && x !== 0) || !y || !width || !height) {
+        throw new Error("Invalid spike object");
+      }
+
+      this.wizzard = new WizzardFrog(this, x, y, "small");
+      this.enemies.add(this.wizzard);
+    }
+  }
+
+  markPlayerMoved() {
+    this.playerMoved = true;
+  }
+
+  markPlayerJumped() {
+    this.playerJumped = true;
+  }
+
+  markPlayerAteMushroom() {
+    this.playerAteMushroom = true;
+    this.playerAteMushroomTime = this.time.now;
+  }
+
+  preload() {
+    this.load.tilemapTiledJSON("map", "maps/level1.json");
   }
 
   update() {
@@ -156,6 +180,8 @@ export class Level1 extends BaseScene {
       });
     }
 
-    this.wizzardSprite.anims.play("frog-idle", true);
+    if (this.wizzard) {
+      this.wizzard.update();
+    }
   }
 }
